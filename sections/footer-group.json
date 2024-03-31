@@ -8,14 +8,8 @@
         "heading_ePtRi3": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to our emails",
+            "heading": "Subscribe to our newsletter for <span style=\"text-decoration:underline\"><em>actionable health content<\/em><\/span> you can use.",
             "heading_size": "h1"
-          }
-        },
-        "paragraph_4gycaC": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
           }
         },
         "email_form_BbExtw": {
@@ -26,8 +20,10 @@
       },
       "block_order": [
         "heading_ePtRi3",
-        "paragraph_4gycaC",
         "email_form_BbExtw"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
         "color_scheme": "scheme-526fd71a-4c95-4b9d-807c-a3ce777b6689",
@@ -47,18 +43,6 @@
     },
     "footer": {
       "type": "footer",
-      "blocks": {
-        "text_6tpQXk": {
-          "type": "text",
-          "settings": {
-            "heading": "Heading",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_6tpQXk"
-      ],
       "settings": {
         "color_scheme": "scheme-5",
         "newsletter_enable": false,

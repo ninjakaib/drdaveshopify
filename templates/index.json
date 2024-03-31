@@ -123,39 +123,12 @@
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
-        "button_link": "",
+        "button_link": "shopify:\/\/products\/potassimax",
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "newsletter_T83Yzm": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_kqTmTV": {
-          "type": "heading",
-          "settings": {
-            "heading": "Subscribe to <em>our<\/em> emails",
-            "heading_size": "h1"
-          }
-        },
-        "email_form_jBy6Gy": {
-          "type": "email_form",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "heading_kqTmTV",
-        "email_form_jBy6Gy"
-      ],
-      "settings": {
-        "color_scheme": "scheme-526fd71a-4c95-4b9d-807c-a3ce777b6689",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     }
   },
@@ -163,7 +136,6 @@
     "custom_liquid_hbhhQg",
     "image_banner",
     "rich_text",
-    "multicolumn",
-    "newsletter_T83Yzm"
+    "multicolumn"
   ]
 }
