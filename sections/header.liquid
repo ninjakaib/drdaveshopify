@@ -251,10 +251,12 @@
             {%- endform -%}
           </localization-form>
         {%- endif -%}
+
+        
       </div>
             <style>
         :root {
-            --inputs-radius: 20px !important;
+            --inputs-radius: 10px !important;
         }
 
         .mobile-search {
@@ -284,6 +286,7 @@
           }
         }
       </style>
+      
       <div class="mobile-search">
         {% render 'header-search', input_id: 'Search-In-Modal' %}
       </div>
