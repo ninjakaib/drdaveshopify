@@ -1,0 +1,67 @@
+<!-- sections/custom-footer.liquid -->
+
+{% schema %}
+{
+  "name": "Custom Footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Menu Settings"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu_1",
+      "label": "Footer Menu 1"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu_2",
+      "label": "Footer Menu 2"
+    },
+    {
+      "type": "header",
+      "content": "Brand Info"
+    },
+    {
+      "type": "text",
+      "id": "brand_info",
+      "label": "Brand Information",
+      "default": "Your Brand Info Here"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Custom Footer",
+      "category": "Footer"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  /* Add your custom styles here or include from assets */
+  .custom-footer-nav {
+    /* Your styles for the footer nav */
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  /* Your JavaScript, if needed */
+{% endjavascript %}
+
+<div class="custom-footer">
+  <div class="custom-footer-nav">
+    {% for link in linklists[settings.footer_menu_1].links %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+  </div>
+  <div class="custom-footer-nav">
+    {% for link in linklists[settings.footer_menu_2].links %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+  </div>
+  <div class="brand-info">
+    <p>{{ settings.brand_info }}</p>
+  </div>
+</div>
