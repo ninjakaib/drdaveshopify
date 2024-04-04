@@ -1,59 +1,21 @@
 {
   "sections": {
-    "custom_liquid_hbhhQg": {
-      "type": "custom-liquid",
+    "promotional_banner_McBmWE": {
+      "type": "promotional-banner",
       "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "title": "Coming Soon!\nRX5 Clinical Strength Supplements",
+        "num_products": "2",
+        "hero_image": "shopify:\/\/shop_images\/Dave-blue-shirt_1.png",
+        "product_list": [
+          "potassimax",
+          "lyco-power"
+        ],
+        "product_image_size": 200,
+        "brand_image_size": 870,
+        "product_margin": 50,
+        "product_padding": 10,
+        "hero_margin_top": 0,
+        "color_scheme": "scheme-2"
       }
     },
     "rich_text": {
@@ -76,6 +38,36 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 0
+      }
+    },
+    "featured_products_4349mQ": {
+      "type": "featured-products",
+      "settings": {
+        "section_title": "RX5 Clinical-Strength Supplements",
+        "alignment": "center",
+        "title_size": "l",
+        "color_scheme": "",
+        "collection": "rx5-clinical-strength-supplements",
+        "product_image_size": 200,
+        "product_title_bold": true,
+        "products_per_row": 3,
+        "vertical_spacing": 20,
+        "product-info-vertical-spacing": 10
+      }
+    },
+    "featured_products_gdLAxM": {
+      "type": "featured-products",
+      "settings": {
+        "section_title": "RX5 Clinical-Strength Supplements",
+        "alignment": "center",
+        "title_size": "l",
+        "color_scheme": "",
+        "collection": "all-health-supplements",
+        "product_image_size": 200,
+        "product_title_bold": true,
+        "products_per_row": 2,
+        "vertical_spacing": 20,
+        "product-info-vertical-spacing": 10
       }
     },
     "multicolumn": {
@@ -133,9 +125,10 @@
     }
   },
   "order": [
-    "custom_liquid_hbhhQg",
-    "image_banner",
+    "promotional_banner_McBmWE",
     "rich_text",
+    "featured_products_4349mQ",
+    "featured_products_gdLAxM",
     "multicolumn"
   ]
 }
