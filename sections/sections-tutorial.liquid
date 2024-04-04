@@ -1,0 +1,58 @@
+<p>Hello World</p>
+<h2>Text Setting</h2>
+<p>{{ section.settings.text_setting }}</p>
+
+<h2>Text Area Setting</h2>
+<p>{{ section.settings.textarea_setting | newline_to_br }}</p>
+
+<div>{{ section.settings.rich_text_setting }}</div>
+
+{% schema %}
+{
+  "name": "Sections Tutorial",
+  "tag": "section",
+  "class": "section-tutorial",
+  "limit": 2,
+  "settings": [
+    {
+      "type": "text",
+      "id": "text_setting",
+      "label": "Text Setting",
+      "default": "default setting value",
+      "info": "This is some helper text"
+    },
+    {
+      "type": "textarea",
+      "id": "textarea_setting",
+      "label": "Text Area Setting"
+    },
+    {
+      "type": "richtext",
+      "label": "rich_text_setting",
+      "id": "rich_text_setting"
+    },
+    {
+      "type": "range",
+      "id": "range_setting",
+      "label": "Range Setting",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 50
+    },
+    {
+      "type": "color",
+      "id": "color_setting",
+      "label": "Color Setting",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Sections Tutorial",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

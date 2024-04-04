@@ -1,0 +1,181 @@
+<!-- sections/promotional-products.liquid -->
+{% schema %}
+{
+  "name": "Promotional Banner",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "placeholder": "Title Text Here",
+      "default": "Very Creative Heading"
+    },
+    {
+      "type": "select",
+      "id": "num_products",
+      "label": "Number of products to display",
+      "options": [
+        {
+          "value": "1",
+          "label": "One"
+        },
+        {
+          "value": "2",
+          "label": "Two"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "limit": 2
+    },
+    {
+      "type": "range",
+      "id": "product_image_size",
+      "label": "Product Image Size",
+      "min": 10,
+      "max": 200,
+      "step": 10,
+      "default": 200,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "brand_image_size",
+      "label": "Brand Image Size",
+      "min": 200,
+      "max": 1000,
+      "step": 10,
+      "default": 200,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "product_margin",
+      "label": "Product Item Margin",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 10,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "product_padding",
+      "label": "Product Card Padding",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 10,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "hero_margin_top",
+      "label": "Hero Image Top Margin",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 10,
+      "unit": "px"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme_2",
+      "label": "Color Scheme"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promotional Products",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .promotional-section {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .promotional-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: {{ section.settings.product_margin }}px;
+    width: {{ settings.layout.page_width }}px;
+  }
+
+  .product-details {
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .product-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .product-item {
+    margin: {{ section.settings.product_margin }}px;
+    flex-basis: calc(50% - {{ section.settings.product_margin | times: 2 }}px);
+  }
+
+  .brand-details {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: {{ section.settings.hero_margin_top }}px;
+  }
+</style>
+
+<div
+  class="color-{{ section.settings.color_scheme }} promotional-section"
+  data-section-type="promotional-products"
+  data-section-id="{{ section.id }}"
+>
+  <div class="promotional-content">
+    <!-- Div1: Title and Products -->
+    <div class="product-details">
+      <div class="product-heading">
+        <h1>{{ section.settings.title | newline_to_br }}</h1>
+      </div>
+      <div class="product-cards">
+        {% for product in section.settings.product_list %}
+          <div class="product-item">
+            <div class="product-image">
+              {{
+                product.featured_image
+                | image_url: width: section.settings.product_image_size
+                | image_tag: alt: product.title
+              }}
+            </div>
+            {% render 'buy-buttons', product: product %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Div2: Hero Image -->
+    <div class="brand-details">
+      {{ section.settings.hero_image | image_url: width: section.settings.brand_image_size | image_tag }}
+    </div>
+  </div>
+</div>
