@@ -81,6 +81,24 @@
             "id": "shadow",
             "label": "t:settings_schema.colors.settings.shadow.label",
             "default": "#121212"
+          },
+          {
+            "type": "color",
+            "id": "link",
+            "label": "Link",
+            "default": "#0D575B"
+          },
+          {
+            "type": "color",
+            "id": "price",
+            "label": "Price",
+            "default": "#1B99A1"
+          },
+          {
+            "type": "color",
+            "id": "secondary_text",
+            "label": "Secondary Text",
+            "default": "#000000"
           }
         ],
         "role": {
@@ -145,6 +163,16 @@
         "unit": "%",
         "label": "t:settings_schema.typography.settings.body_scale.label",
         "default": 100
+      },
+      {
+        "type": "range",
+        "id": "body_letter_spacing",
+        "label": "Body Letter Spacing",
+        "min": -5,
+        "max": 5,
+        "step": 0.1,
+        "default": 1,
+        "unit": "pt"
       }
     ]
   },

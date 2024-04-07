@@ -3,19 +3,18 @@
     "promotional_banner_McBmWE": {
       "type": "promotional-banner",
       "settings": {
+        "color_scheme": "scheme-2",
         "title": "Coming Soon!\nRX5 Clinical Strength Supplements",
-        "num_products": "2",
-        "hero_image": "shopify:\/\/shop_images\/Dave-blue-shirt_1.png",
+        "hero_image": "shopify:\/\/shop_images\/dave-blue-shirt-hires.png",
+        "hero_image_size": 460,
         "product_list": [
           "potassimax",
           "lyco-power"
         ],
-        "product_image_size": 200,
-        "brand_image_size": 700,
-        "product_margin": 50,
-        "product_padding": 10,
-        "hero_margin_top": 0,
-        "color_scheme": "scheme-2"
+        "product_image_size": 250,
+        "product_gap": 80,
+        "content_t_padding": 50,
+        "content_b_padding": 50
       }
     },
     "rich_text": {
@@ -43,33 +42,39 @@
     "featured_products_4349mQ": {
       "type": "featured-products",
       "settings": {
-        "section_title": "RX5 Clinical-Strength Supplements",
+        "section_title": "{{ section.settings.collection.title }}",
+        "margin_top": 30,
         "alignment": "center",
         "title_size": "l",
         "color_scheme": "",
         "collection": "rx5-clinical-strength-supplements",
-        "product_image_size": 200,
+        "max_rows": 2,
+        "product_image_size": 250,
+        "product_card_h_padding": 50,
+        "product_card_t_padding": 50,
+        "product_card_b_padding": 30,
+        "product_card_gap": 40,
         "product_title_bold": true,
-        "products_per_row": 3,
-        "product_card_spacing": 20,
-        "vertical_spacing": 20,
-        "product-info-vertical-spacing": 10
+        "product_card_margin": 20
       }
     },
     "featured_products_gdLAxM": {
       "type": "featured-products",
       "settings": {
-        "section_title": "RX5 Clinical-Strength Supplements",
+        "section_title": "{{ section.settings.collection.title }}",
+        "margin_top": 30,
         "alignment": "center",
         "title_size": "l",
         "color_scheme": "",
         "collection": "all-health-supplements",
-        "product_image_size": 200,
+        "max_rows": 2,
+        "product_image_size": 250,
+        "product_card_h_padding": 50,
+        "product_card_t_padding": 50,
+        "product_card_b_padding": 30,
+        "product_card_gap": 40,
         "product_title_bold": true,
-        "products_per_row": 2,
-        "product_card_spacing": 20,
-        "vertical_spacing": 20,
-        "product-info-vertical-spacing": 10
+        "product_card_margin": 20
       }
     },
     "multicolumn": {
@@ -78,8 +83,8 @@
         "column1": {
           "type": "column",
           "settings": {
-            "title": "",
-            "text": "<p><\/p><p>I’ve greatly increased my supplementation of lycopene over the last several months. We haven’t rechecked my PSA again yet, but the symptoms have definitely gone down quite a bit. Especially getting up at night to urinate and sudden urgency.<\/p><p>-<a href=\"http:\/\/www.youtube.com\/channel\/UCTl3aZUUJFoXIpWobOkXAfQ\" target=\"_blank\">@mr88cet<\/a><\/p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -87,8 +92,8 @@
         "column2": {
           "type": "column",
           "settings": {
-            "title": "",
-            "text": "<p><\/p><p>Great video my blood pressure was 190\/110 I added a potassium supplement and in 2 weeks I was at 135\/85<br\/>-<span style=\"text-decoration:underline\">@roccocalvetti-cg9kf<\/span><\/p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -96,8 +101,8 @@
         "column3": {
           "type": "column",
           "settings": {
-            "title": "",
-            "text": "<p>I have been on VitD3 and VitK2 since July 1, 2021. Calcium started to deposit on my teeth which I was able to break off. That no longer happens. K2 also helps to reduce wrinkles! I have been on a whole food plant based diet and have lost 60 lbs easily without exercise. I am 71 years old but feel like a teenager. I am now weight training and no longer take any Rx medications.<\/p><p>-<a href=\"http:\/\/www.youtube.com\/channel\/UC2xn74CKawTzXGBc-g-2tig\" target=\"_blank\">@garysekerak1320 <\/a><\/p>",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
           }

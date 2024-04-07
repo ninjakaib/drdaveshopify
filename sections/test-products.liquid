@@ -1,0 +1,209 @@
+{% schema %}
+{
+  "name": "Test Products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "RX5 Clinical-Strength Supplements"
+    },
+    {
+      "type": "text_alignment",
+      "id": "alignment",
+      "label": "Title Text alignment",
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "title_size",
+      "label": "Title Text Size",
+      "options": [
+        {
+          "value": "s",
+          "label": "Small"
+        },
+        {
+          "value": "m",
+          "label": "Medium"
+        },
+        {
+          "value": "l",
+          "label": "Large"
+        }
+      ],
+      "default": "l"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme_2",
+      "label": "Color Scheme"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "product_card_size",
+      "label": "Product Card Size",
+      "min": 200,
+      "max": 600,
+      "step": 10,
+      "default": 300,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "product_title_bold",
+      "label": "Bold Product Title",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "products_per_row",
+      "label": "Products per row",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "total_products",
+      "label": "Total products to display",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "product_card_spacing",
+      "label": "Product Card Margin",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "vertical_spacing",
+      "label": "Vertical spacing",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "product-info-vertical-spacing",
+      "label": "Product Info Vertical spacing",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 10
+    }
+  ],
+  "presets": [
+    {
+      "name": "Test Products"
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+  :root {
+    --card-size: {{ section.settings.product_card_size }}px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.products_per_row }}, 1fr);
+    grid-gap: {{ section.settings.product_card_spacing }}px;
+    justify-items: center;
+  }
+
+  .product-card {
+    width: var(--card-size);
+    padding: 20px;
+    box-shadow: 0px 0px 20px grey;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .product-description-truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+  }
+
+  .tidbit {
+    margin-bottom: 10px;
+  }
+{% endstyle %}
+
+<section class="color-{{ section.settings.color_scheme }} featured-products">
+  {% if section.settings.title_size == 's' %}
+    <h3 style="text-align: {{ section.settings.alignment }}">{{ section.settings.section_title }}</h3>
+  {% elsif section.settings.title_size == 'm' %}
+    <h2 style="text-align: {{ section.settings.alignment }}">{{ section.settings.section_title }}</h2>
+  {% elsif section.settings.title_size == 'l' %}
+    <h1 style="text-align: {{ section.settings.alignment }}">{{ section.settings.section_title }}</h1>
+  {% endif %}
+
+  <div class="product-grid">
+    {% for product in section.settings.collection.products limit: section.settings.total_products %}
+      <div class="product-card">
+        <div class="product-image">
+          {% comment %} <img src="{{ product.featured_image | img_url: '1000x' }}" alt="{{ product.title }}"> {% endcomment %}
+          {{ product.featured_image | image_url: width: '1000x' | image_tag: alt: product.title }}
+        </div>
+
+        <div class="product-info">
+          <div class="product-title tidbit">
+            {% if section.settings.product_title_bold %}
+              <h3>
+                <strong>{{ product.title }}</strong>
+              </h3>
+            {% else %}
+              <h3>{{ product.title }}</h3>
+            {% endif %}
+          </div>
+
+          <div class="product-description-truncate tidbit">
+            <p>{{ product.metafields.custom.shortdesc.value }}</p>
+          </div>
+
+          <div class="product-price tidbit">{{ product.price | money_with_currency }}</div>
+
+          <div class="product-link tidbit">
+            <a href="{{ product.url }}" class="btn">{{ 'View details >>' }}</a>
+          </div>
+
+          <div class="product-buy-button tidbit">
+            {% render 'buy-buttons', product: product %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

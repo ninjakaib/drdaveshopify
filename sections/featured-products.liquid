@@ -5,8 +5,17 @@
     {
       "type": "text",
       "id": "section_title",
-      "label": "Section Title",
-      "default": "RX5 Clinical-Strength Supplements"
+      "label": "Section Title"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top Margin",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 40,
+      "unit": "px"
     },
     {
       "type": "text_alignment",
@@ -46,13 +55,65 @@
       "label": "Collection"
     },
     {
+      "type": "number",
+      "id": "max_rows",
+      "label": "Maximum Number of Rows",
+      "default": 2
+    },
+    {
+      "type": "checkbox",
+      "id": "view_more",
+      "label": "Show View More Products",
+      "default": true
+    },
+    {
       "type": "range",
       "id": "product_image_size",
       "label": "Product Image Size",
       "min": 100,
       "max": 400,
       "step": 10,
-      "default": 200,
+      "default": 250,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "product_card_h_padding",
+      "label": "Product Card Horizontal Padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "product_card_t_padding",
+      "label": "Product Card Top Padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "product_card_b_padding",
+      "label": "Product Card Bottom Padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "product_card_gap",
+      "label": "Product Card Internal Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40,
       "unit": "px"
     },
     {
@@ -63,41 +124,13 @@
     },
     {
       "type": "range",
-      "id": "products_per_row",
-      "label": "Products per row",
-      "min": 1,
-      "max": 4,
-      "step": 1,
-      "default": 3
-    },
-    {
-      "type": "range",
-      "id": "product_card_spacing",
+      "id": "product_card_margin",
       "label": "Product Card Margin",
       "min": 0,
       "max": 50,
       "step": 1,
       "default": 20,
       "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "vertical_spacing",
-      "label": "Vertical spacing",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "default": 20,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "product-info-vertical-spacing",
-      "label": "Product InfoVertical spacing",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "default": 10
     }
   ],
   "presets": [
@@ -108,107 +141,111 @@
 }
 {% endschema %}
 
-{% style %}
-    .product-grid {
+<style>
+  .section-{{ section.id }} {
+    margin-top: {{ section.settings.margin_top }}px;
+  }
+
+  .header {
+    display: block;
+    text-align: {{ section.settings.alignment }};
+  }
+
+  .header * {
+    margin: 0px;
+  }
+
+  .product-grid {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    /* background-color: #d0d0d0 */
-    }
-
-    .product-card {
-    display: flex;
-    margin: {{ section.settings.product_card_spacing }}px;
-    padding-right: 25px;
-    /* border-style: solid; */
-    box-shadow: 0px 0px 20px grey;
-    /* background-color: #02C7C5; */
-    }
-
-    /* .product-image {
-    display:table-cell;
-    vertical-align:bottom;
-    text-align:center
-    } */
-    .product-image {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    .product-info {
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    /* background-color: #7964A4; */
-    width: 300px;
-    }
-    .tidbit {
-        margin-bottom: {{section.settings.product-info-vertical-spacing}}px
-    }
-    /* .product-title {
-    background-color: #9F9E00;
+    max-width: {{ settings.page_width }}px;
+    margin: 0 auto;
   }
 
-  .product-description {
-    background-color: #D2D000;
+  .view-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
   }
 
+  .view-more a {
+  {% comment %} remove underline from link text {% endcomment %}
+  color: rgb(var(--color-link));
+  text-decoration: none;
+  }
 
+  a:hover {
+    color: rgb(var(--color-price));
+  }
 
-  .product-cta {
-    background-color: #008CD7;
-  } */
-{% endstyle %}
+  .preorder-button {
+    background-color: #BD765A; /* Rectangle color */
+    color: white; /* Text color */
+    font-size: 0.7em; /* Font size */
+    padding: 5px 10px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    align-self: flex-start;
+    transform: translate(3em, 5em);
+    {% comment %} transform: translateX(55px); {% endcomment %}
+  }
 
-<section class="color-{{ section.settings.color_scheme }} featured-products">
-  {% if section.settings.title_size == 's' %}
-    <h3 style="text-align: {{ section.settings.alignment }}">{{ section.settings.section_title }}</h3>
-  {% elsif section.settings.title_size == 'm' %}
-    <h2 style="text-align: {{ section.settings.alignment }}">{{ section.settings.section_title }}</h2>
-  {% elsif section.settings.title_size == 'l' %}
-    <h1 style="text-align: {{ section.settings.alignment }}">{{ section.settings.section_title }}</h1>
-  {% endif %}
+  .product-card-container {
+    margin-top: -30px;
+  }
+</style>
+
+{% assign max_products = section.settings.max_rows | times: 2 %}
+
+<section class="color-{{ section.settings.color_scheme }} featured-products section-{{ section.id }}">
+  <div class="header">
+    {% if section.settings.title_size == 's' %}
+      <h3>{{ section.settings.section_title }}</h3>
+    {% elsif section.settings.title_size == 'm' %}
+      <h2>{{ section.settings.section_title }}</h2>
+    {% elsif section.settings.title_size == 'l' %}
+      <h1>{{ section.settings.section_title }}</h1>
+    {% endif %}
+  </div>
 
   <div class="product-grid">
-    <div class="product-grid">
-      {% for product in section.settings.collection.products %}
-        <div class="product-card">
-          <div class="product-image">
-            {{
-              product.featured_image
-              | image_url: width: section.settings.product_image_size
-              | image_tag: alt: product.title
-            }}
-          </div>
-
-          <div class="product-info">
-            <div class="product-title tidbit">
-              {% if section.settings.product_title_bold %}
-                <h3>
-                  <strong>{{ product.title }}</strong>
-                </h3>
-              {% else %}
-                <h3>{{ product.title }}</h3>
-              {% endif %}
-            </div>
-
-            <div class="product-description tidbit">
-              <p>Description goes here! Limit to just a few lines</p>
-              {% comment %} {{ product.description }} {% endcomment %}
-            </div>
-            <div class="product-price tidbit">{{ product.price | money_with_currency }}</div>
-            <div class="product-link tidbit">
-              <a href="{{ product.url }}" class="btn">{{ 'View details >>' }}</a>
-            </div>
-            <div class="product-buy-button tidbit">
-              {% render 'buy-buttons', product: product %}
-            </div>
-          </div>
+    {% for product in section.settings.collection.products limit: max_products %}
+      {% if product.tags contains 'preorder' %}
+        <div class="product-card-container">
+          <button class="preorder-button">Pre-Order</button>
+          {% render 'new-product-card',
+            product: product,
+            product_image_size: section.settings.product_image_size,
+            product_title_bold: section.settings.product_title_bold,
+            product_card_margin: section.settings.product_card_margin,
+            product_card_h_padding: section.settings.product_card_h_padding,
+            product_card_t_padding: section.settings.product_card_t_padding,
+            product_card_b_padding: section.settings.product_card_b_padding,
+            product_card_gap: section.settings.product_card_gap,
+            color_scheme: section.settings.color_scheme
+          %}
         </div>
-      {% endfor %}
-    </div>
+      {% else %}
+        {% render 'new-product-card',
+          product: product,
+          product_image_size: section.settings.product_image_size,
+          product_title_bold: section.settings.product_title_bold,
+          product_card_margin: section.settings.product_card_margin,
+          product_card_h_padding: section.settings.product_card_h_padding,
+          product_card_t_padding: section.settings.product_card_t_padding,
+          product_card_b_padding: section.settings.product_card_b_padding,
+          product_card_gap: section.settings.product_card_gap,
+          color_scheme: section.settings.color_scheme
+        %}
+      {% endif %}
+    {% endfor %}
   </div>
+
+  {% if section.settings.view_more %}
+    <div class="view-more">
+      {{ 'View all >>' | link_to: section.settings.collection.url }}
+    </div>
+  {% endif %}
 </section>

@@ -1,93 +1,128 @@
 {% comment %}
-  Renders a product card
-  Accepts:
+  Renders a product card with an image, title, description, price, details link, and buy button.
 
-  card_product: {Object} Product Liquid object (optional)
-  media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
-  show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
-  show_vendor: {Boolean} Show the product vendor. Default: false
-  show_rating: {Boolean} Show the product rating. Default: false
-  extend_height: {Boolean} Card height extends to available container space. Default: true (optional)
-  lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
-  quick_add: {Boolean} Show the quick add button.
-  section_id: {String} The ID of the section that contains this card.
-  horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false (optional)
-  horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
-  placeholder_image: {String} The placeholder image to use when no product exists. Default: 'product-apparel-2' (optional) Usage: {% render 'card-product', show_vendor: section.settings.show_vendor %}
+  Accepts:
+  - product: {Object} The product object containing information about the product.
+  - product_image_size: {String} The size to which the product image should be resized.
+  - product_title_bold: {Boolean} Determines if the product title should be bold.
+  - product_card_spacing: {String} The margin around the product card.
+  - product_card_h_padding: {String} The horizontal padding inside the product card.
+  - product_card_t_padding: {String} The top padding inside the product card.
+  - product_card_b_padding: {String} The bottom padding inside the product card.
+  - product_card_gap: {String} The gap between elements inside the product card.
+
+  Usage:
+  Include this snippet in any section or template by using the {% render %} tag and passing the required parameters. Example:
+
+  {% render 'product-card',
+    product: product,
+    product_image_size: '250px',
+    product_title_bold: true,
+    product_card_spacing: '10px',
+    product_card_h_padding: '15px',
+    product_card_t_padding: '20px',
+    product_card_b_padding: '20px',
+    product_card_gap: '5px'
+  %}
 {% endcomment %}
-{%- if card_product and card_product != empty -%}
-  <div class="card-wrapper product-card-wrapper">
-    <div class="card card--standard">
-      <div class="card__inner color-{{ settings.card_color_scheme }} ratio" style="--ratio-percent: 100%;">
-        <div class="card__media">
-          <div class="media media--transparent">
-            {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-            <img
-              srcset=" {%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%} {%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%} {%- if card_product.featured_media.width >= 533 -%}{{ card_product.featured_media | image_url: width: 533 }} 533w,{%- endif -%} {%- if card_product.featured_media.width >= 720 -%}{{ card_product.featured_media | image_url: width: 720 }} 720w,{%- endif -%} {%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940 }} 940w,{%- endif -%} {%- if card_product.featured_media.width >= 1066 -%}{{ card_product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%} {{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w "
-              src="{{ card_product.featured_media | image_url: width: 533 }}"
-              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-              alt="{{ card_product.featured_media.alt | escape }}"
-              class="motion-reduce"
-              {% unless lazy_load == false %}
-                loading="lazy"
-              {% endunless %}
-              width="{{ card_product.featured_media.width }}"
-              height="{{ card_product.featured_media.height }}"
-            >
-            {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
-          </div>
-        </div>
-      </div>
-      <div class="card__content">
-        <div class="card__information">
-          <h3 class="card__heading h5">
-            <a href="{{ card_product.url }}" class="full-unstyled-link"> {{ card_product.title | escape }} </a>
-          </h3>
-          <div class="card-information">
-            <p class="card__description">{{ card_product.description | strip_html | truncatewords: 20 }}</p>
-            {% render 'price', product: card_product, price_class: 'card__price', show_compare_at_price: false %}
-          </div>
-        </div>
-        <div class="card__badge">
-          {%- if card_product.available == false -%}
-            <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">
-              {{- 'products.product.sold_out' | t -}}
-            </span>
-          {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-            <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">
-              {{- 'products.product.on_sale' | t -}}
-            </span>
-          {%- endif -%}
-        </div>
-      </div>
-      <div class="card__badge">
-        <button class="button button--secondary card__cta">{{ 'products.product.add_to_cart' | t }}</button>
-      </div>
+
+<div class="product-card">
+  <div class="product-image">
+    {{ product.featured_image | image_url: height: product_image_size | image_tag: alt: product.title }}
+  </div>
+
+  <div class="product-info">
+    <div class="product-title tidbit">
+      {% if product_title_bold %}
+        <h3>
+          <strong>{{ product.title }}</strong>
+        </h3>
+      {% else %}
+        <h3>{{ product.title }}</h3>
+      {% endif %}
     </div>
-  </div>
-{%- else -%}
-  <div class="card-wrapper product-card-wrapper">
-    <div class="card card--standard color-{{ settings.card_color_scheme }}">
-      <div class="card__inner ratio" style="--ratio-percent: 100%;">
-        <div class="card__content">
-          <div class="card__information">
-            <h3 class="card__heading h5">
-              <a role="link" aria-disabled="true" class="full-unstyled-link"> {{ 'onboarding.product_title' | t }} </a>
-            </h3>
-            <div class="card-information">
-              {% comment %}
-                <p class="card__description">{{ 'onboarding.product_description' | t }}</p>
-                <div class="card__price">
-                  <span>{{ 'onboarding.product_price' | t }}</span>
-              {% endcomment %}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card__badge">
-        <button class="button button--secondary card__cta" disabled>{{ 'products.product.add_to_cart' | t }}</button>
-      </div>
+
+    <div class="product-description tidbit">
+      {{ product.metafields.custom.shortdesc.value }}
     </div>
+
+    <div class="product-price tidbit">
+      {{ product.price | money }}
+    </div>
+
+    <div class="product-link tidbit">
+      <strong
+        ><a href="{{ product.url }}" class="btn">{{ 'View details >>' }}</a></strong
+      >
+    </div>
+
+    <div class="product-buy-button tidbit">{% render 'buy-buttons', product: product %}</div>
   </div>
-  </div>
-{%- endif -%}
+</div>
+
+<style>
+     .product-card {
+       display: flex;
+       margin: {{ product_card_margin }}px;
+       padding-left: {{ product_card_h_padding }}px;
+       padding-right: {{ product_card_h_padding }}px;
+       padding-top: {{ product_card_t_padding }}px;
+       padding-bottom: {{ product_card_b_padding }}px;
+       gap: {{ product_card_gap }}px;
+       box-shadow: 0px 0px 20px grey;
+     }
+
+     .product-image {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+     }
+
+     .product-info {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       padding-top: 1%;
+       padding-bottom: 2%;
+       width: 250px;
+       {% comment %} letter-spacing: -0.5px; {% endcomment %}
+     }
+
+     .product-description {
+       overflow: hidden;
+       display: -webkit-box;
+       -webkit-box-orient: vertical;
+       -webkit-line-clamp: 3; /* Adjust the number of lines */
+       text-overflow: ellipsis;
+       color: rgb(var(--color-foreground));
+       line-height: 1.3em;
+     }
+  {% comment %}
+     .preorder-button {
+       background-color: #BD765A; /* Rectangle color */
+       color: white; /* Text color */
+       font-size: 0.7em; /* Font size */
+       padding: 5px 10px; /* Padding inside the button */
+       border: none; /* No border */
+       border-radius: 5px; /* Rounded corners */
+       align-self: flex-start;
+       transform: translate(3em, 5em);
+       {% comment %} transform: translateX(55px); {% endcomment %}
+     } {% endcomment %}
+
+     .product-price {
+       color: rgb(var(--color-price));
+       font-weight: 600;
+     }
+
+     .product-link * {
+       color: rgb(var(--color-link));
+       font-size: 0.9em;
+     }
+
+     h3 {
+       margin: 0px;
+       font-size: 1.2em;
+     }
+</style>
