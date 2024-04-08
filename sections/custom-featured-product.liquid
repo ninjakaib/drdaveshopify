@@ -3,6 +3,12 @@
   "name": "Custom Featured Product",
   "settings": [
     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme_1",
+      "label": "Color Scheme"
+    },
+    {
       "type": "product",
       "id": "product",
       "label": "Featured Product"
@@ -107,7 +113,7 @@
     margin: 0;
   }
   .product-description-{{ section.id }} {
-  color: rgb(var(--color-foreground));
+  /* color: rgb(var(--color-text); */
   }
 
   .product-price-{{ section.id }} {
@@ -126,7 +132,7 @@
 
 {% assign product = section.settings.product %}
 
-<section class="custom-featured-product-{{ section.id }}">
+<section class="color-{{ section.settings.color_scheme }} custom-featured-product-{{ section.id }}">
   <div class="product-card-{{ section.id }}">
     <div class="product-image-{{ section.id }}">
       {{
@@ -142,7 +148,7 @@
       </div>
 
       <div class="product-description-{{ section.id }}">
-        {{ product.metafields.custom.shortdesc.value }}
+        {{ product.description }}
       </div>
 
       <div class="product-price-{{ section.id }}">
