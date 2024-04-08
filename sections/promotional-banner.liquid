@@ -129,6 +129,15 @@
     flex-wrap: wrap;
   }
 
+  /* Additional styles for image hover effect */
+  .product-image-{{ section.id }} img {
+    transition: transform 0.3s ease; /* Smooth transition for the transform effect */
+  }
+
+  .product-image-{{ section.id }}:hover img {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+  }
+
   .product-item {
     flex: 0 1 auto;
     margin-top: 10px;
@@ -162,11 +171,12 @@
       <div class="product-cards">
         {% for product in section.settings.product_list %}
           <div class="product-item">
-            <div class="product-image">
+            <div class="product-image-{{ section.id }}">
               {{
                 product.featured_image
                 | image_url: height: section.settings.product_image_size
                 | image_tag: alt: product.title
+                | link_to: product.url
               }}
             </div>
             <div class="product-buy-button-{{ section.id }}">
