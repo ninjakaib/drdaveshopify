@@ -98,8 +98,8 @@
   .promotional-content {
     text-align: center;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-wrap: no-wrap;
     overflow:hidden;
     overflow-y:hidden;
   }
@@ -110,6 +110,8 @@
     justify-content: center;
     padding-top: {{ section.settings.content_t_padding }}px;
     padding-bottom: {{ section.settings.content_b_padding }}px;
+    position: relative;
+    left: 5%;
   }
 
   .product-heading h1 {
@@ -129,16 +131,19 @@
 
   .product-item {
     flex: 0 1 auto;
+    margin-top: 10px;
   }
 
   .product-buy-button-{{ section.id }} {
-    margin-top: 25px;
+    margin-top: 10px;
   }
 
   .hero-image {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    position: relative;
+    left: -5%;
   }
 </style>
 

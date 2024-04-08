@@ -26,13 +26,13 @@
   %}
 {% endcomment %}
 
-<div class="product-card">
+<div class="product-card-{{ section.id }}">
   <div class="product-image">
     {{ product.featured_image | image_url: height: product_image_size | image_tag: alt: product.title }}
   </div>
 
-  <div class="product-info">
-    <div class="product-title tidbit">
+  <div class="product-info-{{ section.id }}">
+    <div class="product-title-{{ section.id }} tidbit">
       {% if product_title_bold %}
         <h3>
           <strong>{{ product.title }}</strong>
@@ -42,26 +42,26 @@
       {% endif %}
     </div>
 
-    <div class="product-description tidbit">
+    <div class="product-description-{{ section.id }} tidbit">
       {{ product.metafields.custom.shortdesc.value }}
     </div>
 
-    <div class="product-price tidbit">
+    <div class="product-price-{{ section.id }} tidbit">
       {{ product.price | money }}
     </div>
 
-    <div class="product-link tidbit">
+    <div class="product-link-{{ section.id }} tidbit">
       <strong
         ><a href="{{ product.url }}" class="btn">{{ 'View details >>' }}</a></strong
       >
     </div>
 
-    <div class="product-buy-button tidbit">{% render 'buy-buttons', product: product %}</div>
+    <div class="product-buy-button-{{ section.id }} tidbit">{% render 'buy-buttons', product: product %}</div>
   </div>
 </div>
 
-<style>
-     .product-card {
+{% style %}
+     .product-card-{{ section.id }} {
        display: flex;
        margin: {{ product_card_margin }}px;
        padding-left: {{ product_card_h_padding }}px;
@@ -72,24 +72,25 @@
        box-shadow: 0px 0px 20px grey;
      }
 
-     .product-image {
+     .product-image-{{ section.id }} {
        display: flex;
        flex-direction: column;
        justify-content: center;
        align-items: center;
      }
 
-     .product-info {
+     .product-info-{{ section.id }} {
        display: flex;
        flex-direction: column;
        justify-content: space-between;
        padding-top: 1%;
        padding-bottom: 2%;
        width: 250px;
+       font-size: 0.9em;
        {% comment %} letter-spacing: -0.5px; {% endcomment %}
      }
 
-     .product-description {
+     .product-description-{{ section.id }} {
        overflow: hidden;
        display: -webkit-box;
        -webkit-box-orient: vertical;
@@ -111,18 +112,17 @@
        {% comment %} transform: translateX(55px); {% endcomment %}
      } {% endcomment %}
 
-     .product-price {
+     .product-price-{{ section.id }} {
        color: rgb(var(--color-price));
        font-weight: 600;
      }
 
-     .product-link * {
+     .product-link-{{ section.id }} * {
        color: rgb(var(--color-link));
-       font-size: 0.9em;
      }
 
      h3 {
        margin: 0px;
-       font-size: 1.2em;
+       font-size: 1.3em;
      }
-</style>
+{% endstyle %}

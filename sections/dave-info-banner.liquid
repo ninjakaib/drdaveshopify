@@ -1,0 +1,105 @@
+<!-- sections/promotional-products.liquid -->
+{% schema %}
+{
+  "name": "Dave Banner",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme_3",
+      "label": "Color Scheme"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Info Text",
+      "placeholder": "Info Text Here"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "range",
+      "id": "hero_image_size",
+      "label": "Hero Image Size",
+      "min": 100,
+      "max": 1000,
+      "step": 10,
+      "default": 260,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dave Banner",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .promotional-content-{{ section.id }} {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap-reverse;
+  }
+
+  .dave-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 0 1 300px;
+  }
+
+  .dave-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    min-width: 300px;
+    flex: 1 1 300px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  }
+
+  .dave-text {
+    color: rgb(var(--color-foreground));
+
+    padding: auto;
+  }
+
+  .dave-text p {
+    margin: 0;
+  }
+
+  .about-button-{{ section.id }} {
+    margin-top: 20px;
+    width: 250px;
+  }
+</style>
+
+<div
+  class="color-{{ section.settings.color_scheme }} about-section-{{ section.id }}"
+  data-section-type="promotional-products"
+  data-section-id="{{ section.id }}"
+>
+  <div class="promotional-content-{{ section.id }}">
+    <div class="dave-image">
+      {{ section.settings.hero_image | image_url: height: section.settings.hero_image_size | image_tag }}
+    </div>
+    <div class="dave-info">
+      <div class="dave-text">
+        <p>{{ section.settings.title }}</p>
+      </div>
+      <div class="about-button-{{ section.id }}">{% render 'about-button', input_text: 'Learn More' %}</div>
+    </div>
+  </div>
+</div>
