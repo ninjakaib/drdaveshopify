@@ -32,13 +32,9 @@
         "padding_bottom": 52
       }
     },
-    "custom_liquid_WYUezM": {
-      "type": "custom-liquid",
+    "custom_footer_VVCQzL": {
+      "type": "custom-footer",
       "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "footer": {
@@ -53,15 +49,15 @@
         "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": true,
-        "margin_top": 28,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "margin_top": 0,
+        "padding_top": 0,
+        "padding_bottom": 40
       }
     }
   },
   "order": [
     "newsletter_mHrrrK",
-    "custom_liquid_WYUezM",
+    "custom_footer_VVCQzL",
     "footer"
   ]
 }

@@ -3,10 +3,10 @@
     "promotional_banner_McBmWE": {
       "type": "promotional-banner",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-4",
         "title": "Coming Soon!\nRX5 Clinical Strength Supplements",
-        "hero_image": "shopify:\/\/shop_images\/dave-blue-shirt-hires.png",
-        "hero_image_size": 460,
+        "hero_image": "shopify:\/\/shop_images\/dave-bio-pic-2.png",
+        "hero_image_size": 520,
         "product_list": [
           "potassimax",
           "lyco-power"
@@ -79,14 +79,35 @@
         "product_card_margin": 20
       }
     },
+    "custom_featured_product_3R4mCc": {
+      "type": "custom-featured-product",
+      "settings": {
+        "product": "mastering-your-health-from-the-inside-out",
+        "title": "<h1><em>Mastering Health<br\/><\/em>from the Inside Out<\/h1>",
+        "title_font_size": 36,
+        "product_image_size": 400,
+        "product_card_gap": 40,
+        "show_price": true,
+        "section_margin": 40
+      }
+    },
+    "dave_info_banner_QhFwFb": {
+      "type": "dave-info-banner",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "title": "After 20 years practicing medicine the old-fashioned way, I embarked on a journey to find the foods and supplements that were as powerful as medications for reversing disease. I used this knowledge to throw away my own medications, and I hope that you are able to do the same.",
+        "hero_image": "shopify:\/\/shop_images\/Dave-blue-shirt_1.png",
+        "hero_image_size": 350
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
         "column1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "",
+            "text": "<p><em>\"I’ve greatly increased my supplementation of lycopene over the last several months. We haven’t rechecked my PSA again yet, but the symptoms have definitely gone down quite a bit. Especially getting up at night to urinate and sudden urgency.\"<\/em><\/p>",
             "link_label": "",
             "link": ""
           }
@@ -94,8 +115,8 @@
         "column2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "",
+            "text": "<p><em>\"I went from a PSA of 5.3 to a 4.1 in about 3 months.Thank you doctor!\"<\/em><\/p>",
             "link_label": "",
             "link": ""
           }
@@ -103,8 +124,8 @@
         "column3": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "",
+            "text": "<p><em>\"Thank you again, after 2 weeks of following your recommendation my BL is down from 180\/90 to 120\/70. I am off medication and will continue to check it regularly.I will make your recommendations a part of my lifestyle from now on.\"<\/em><\/p>",
             "link_label": "",
             "link": ""
           }
@@ -115,14 +136,17 @@
         "column2",
         "column3"
       ],
+      "custom_css": [
+        "h2 {margin: auto;}"
+      ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
+        "title": "<em>Hear real stories from our customers...<\/em>",
+        "heading_size": "h2",
         "image_width": "third",
         "image_ratio": "adapt",
         "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
+        "column_alignment": "left",
+        "background_style": "primary",
         "button_label": "",
         "button_link": "shopify:\/\/products\/potassimax",
         "color_scheme": "scheme-1",
@@ -138,6 +162,8 @@
     "rich_text",
     "featured_products_4349mQ",
     "featured_products_gdLAxM",
+    "custom_featured_product_3R4mCc",
+    "dave_info_banner_QhFwFb",
     "multicolumn"
   ]
 }
