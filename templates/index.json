@@ -104,20 +104,11 @@
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "<p><em>\"I’ve greatly increased my supplementation of lycopene over the last several months. We haven’t rechecked my PSA again yet, but the symptoms have definitely gone down quite a bit. Especially getting up at night to urinate and sudden urgency.\"<\/em><\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column2": {
           "type": "column",
           "settings": {
             "title": "",
-            "text": "<p><em>\"I went from a PSA of 5.3 to a 4.1 in about 3 months.Thank you doctor!\"<\/em><\/p>",
+            "text": "<p><em>\"I went from a PSA of 5.3 to a 4.1 in about 3 months. Thank you doctor!\"<\/em><\/p><p><em>-Michael B.<\/em><\/p>",
             "link_label": "",
             "link": ""
           }
@@ -126,22 +117,31 @@
           "type": "column",
           "settings": {
             "title": "",
-            "text": "<p><em>\"Thank you again, after 2 weeks of following your recommendation my BL is down from 180\/90 to 120\/70. I am off medication and will continue to check it regularly.I will make your recommendations a part of my lifestyle from now on.\"<\/em><\/p>",
+            "text": "<p><em>\"Thank you again, after 2 weeks of following your recommendation my BP is down from 180\/90 to 120\/70. I am off medication and will continue to check it regularly. I will make your recommendations a part of my lifestyle from now on.\"<\/em><\/p><p><em>-Lynda P. <\/em><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p><em>\"I’ve greatly increased my supplementation of lycopene over the last several months. We haven’t rechecked my PSA again yet, but the symptoms have definitely gone down quite a bit. Especially getting up at night to urinate and sudden urgency.\"<\/em><\/p><p><em>-Mr. 88<\/em><\/p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column1",
         "column2",
-        "column3"
+        "column3",
+        "column1"
       ],
       "custom_css": [
         "h2 {margin: auto;}"
       ],
       "settings": {
-        "title": "<em>Hear real stories from our customers...<\/em>",
+        "title": "<em>Hear real stories sent to Dr. Dave...<\/em>",
         "heading_size": "h2",
         "image_width": "third",
         "image_ratio": "adapt",
