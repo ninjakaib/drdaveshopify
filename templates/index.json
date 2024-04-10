@@ -104,20 +104,20 @@
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "<p><em>\"I went from a PSA of 5.3 to a 4.1 in about 3 months. Thank you doctor!\"<\/em><\/p><p><em>-Michael B.<\/em><\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column3": {
           "type": "column",
           "settings": {
             "title": "",
             "text": "<p><em>\"Thank you again, after 2 weeks of following your recommendation my BP is down from 180\/90 to 120\/70. I am off medication and will continue to check it regularly. I will make your recommendations a part of my lifestyle from now on.\"<\/em><\/p><p><em>-Lynda P. <\/em><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p><em>\"I went from a PSA of 5.3 to a 4.1 in about 3 months. Thank you doctor!\"<\/em><\/p><p><em>-Michael B.<\/em><\/p>",
             "link_label": "",
             "link": ""
           }
@@ -133,8 +133,8 @@
         }
       },
       "block_order": [
-        "column2",
         "column3",
+        "column2",
         "column1"
       ],
       "custom_css": [
