@@ -428,5 +428,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "a#HeaderMenu-shop-all-health-supplements {text-align: left;}"
+    ]
   }
 }
