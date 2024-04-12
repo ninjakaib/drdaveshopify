@@ -1,0 +1,37 @@
+{% comment %}
+  Renders a dropdown style menu for the sidebar when on smaller screens.
+
+  Usage:
+  {% render 'dropdown-nav', menus: collections %}
+{% endcomment %}
+
+{% assign current_path = request.path %}
+
+<nav class="sidebar-dropdown-navigation" aria-label="Sidebar Dropdown Navigation">
+  <details>
+    <summary class="sidebar-dropdown-summary">
+      {% render 'icon-caret' -%}
+      <span class="sidebar-dropdown-title">SHOP CATEGORIES</span>
+    </summary>
+    <ul class="sidebar-dropdown-list list-menu" role="list">
+      {% for collection in menus %}
+        <li>
+          {% if current_path contains collection.handle %}
+            <a href="{{ collection.url }}" class="sidebar-dropdown-link active-link" aria-current="page">
+              {{ collection.title }}
+            </a>
+          {% else %}
+            <a href="{{ collection.url }}" class="sidebar-dropdown-link">
+              {{ collection.title }}
+            </a>
+          {% endif %}
+        </li>
+      {% endfor %}
+      <li>
+        <a href="{{ all_products['mastering-your-health-from-the-inside-out'].url }}" class="sidebar-dropdown-link"
+          >Book</a
+        >
+      </li>
+    </ul>
+  </details>
+</nav>

@@ -1,0 +1,220 @@
+{% style %}
+    .product-card-{{ section.id }}-{{ product.id }} {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin: {{ product_card_margin }}px;
+      padding-left: 8%;
+      padding-right: 8%;
+      padding-bottom: 5%;
+      padding-top: 50px;
+      box-shadow: 0px 0px 4px #ABABAB;
+      /* width: 100%; */
+      min-width: 150px;
+      height: 100%;
+      aspect-ratio: 28 / 15; /* Set the aspect ratio for vertical cards */
+    }
+
+
+    .preorder-button-{{ section.id }} {
+      position: absolute;
+      top: 15px; /* Adjust as needed */
+      left: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #BD765A;
+      color: white;
+      font-size: 0.7em; /* Adjust font size based on viewport width */
+      border-radius: 5px;
+      /* z-index: 10; Ensure it's above other content */
+      padding-left: 0.8em;
+      padding-right: 0.8em;
+      min-width: fit-content; /* Minimum width to prevent too much shrinkage */
+    }
+
+    @container (min-width: 475px) {
+      .product-card-{{ section.id }}-{{ product.id }} {
+        flex-direction: row;
+        padding-top: 10%;
+        aspect-ratio: 20 / 13; /* Set the aspect ratio for horizontal cards */
+        height: 100%;
+        width: 100%;
+
+      }
+      .preorder-button-{{ section.id }} {
+        font-size: 0.75em; /* Adjust font size based on viewport width */
+    }
+    }
+
+    .product-image-{{ section.id }} {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%; /* Maintain aspect ratio */
+    }
+
+    @container (min-width: 475px) {
+      .product-image-{{ section.id }} {
+        width: 40%; /* Adjust the width as needed */
+        padding-bottom: 40%; /* Maintain aspect ratio */
+      }
+    }
+
+    .product-image-{{ section.id }} img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .product-image-{{ section.id }}:hover img {
+      transform: scale(1.05);
+      z-index: 1;
+    }
+
+    {% comment %}
+    .product-info-{{ section.id }} {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* gap: 0.5em; */
+      padding-top: 1%;
+      padding-bottom: 2%;
+      width: 100%;
+      font-size: 0.9em;
+    }
+    {% endcomment %}
+
+    .product-info-{{ section.id }} {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.5em;
+      padding-top: 1%;
+      padding-bottom: 2%;
+      width: 100%;
+      font-size: 0.9em;
+    }
+
+    .product-description-{{ section.id }}-{{ product.id }} {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      /* -webkit-line-clamp: 5; */
+      text-overflow: ellipsis;
+      color: rgb(var(--color-foreground));
+      --product-description-line-height: 1.6em;
+      line-height: var(--product-description-line-height);
+      /* min-height: calc(5 * var(--product-description-line-height)); */
+      margin-bottom: 0.5em;
+    }
+    .product-info-bottom-{{ section.id }} {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+    .product-link-{{ section.id }}  {
+
+    }
+
+    @container (min-width: 475px) {
+      .product-info-{{ section.id }} {
+        width: 60%; /* Adjust the width as needed */
+        gap: 0;
+      }
+      .product-description-{{ section.id }}-{{ product.id }} {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        text-overflow: ellipsis;
+        color: rgb(var(--color-foreground));
+        line-height: var(--product-description-line-height);
+        /* min-height: calc(3 * var(--product-description-line-height)); */
+        margin-bottom: 0.5em;
+      }
+      .product-buy-button-{{ section.id }} {
+        max-width: 250px;
+      }
+      .product-info-bottom-{{ section.id }} {
+        flex-shrink: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* height: 50%; */
+      }
+    }
+    @container (min-width: 545px) {
+      .product-description-{{ section.id }}-{{ product.id }} {
+        -webkit-line-clamp: 4;
+      }
+    }
+
+  .product-price-{{ section.id }} {
+    color: rgb(var(--color-price));
+    font-weight: 600;
+  }
+
+  .product-link-{{ section.id }} * {
+    color: rgb(var(--color-link));
+
+  }
+
+  .product-link-{{ section.id }} a:hover {
+    color: rgb(var(--color-price));
+  }
+
+  .product-title-{{ section.id }} > h3 {
+    margin: 0px;
+    /* margin-top: 0.1rem; */
+    margin-bottom: 0.8rem;
+    font-size: 1.3em;
+    font-weight: 900;
+  }
+{% endstyle %}
+
+<div class="product-card-{{ section.id }}-{{ product.id }}">
+  {% if product.tags contains 'preorder' %}
+    <div class="preorder-button-{{ section.id }}">Coming Soon!</div>
+  {% endif %}
+
+  <div class="product-image-{{ section.id }}">
+    {{ product.featured_image | image_url: width: 800 | image_tag: alt: product.title | link_to: product.url }}
+  </div>
+
+  <div class="product-info-{{ section.id }}">
+    <div>
+      <div class="product-title-{{ section.id }} tidbit">
+        <h3>{{ product.title }}</h3>
+      </div>
+
+      <div class="product-description-{{ section.id }}-{{ product.id }} tidbit">
+        {{ product.metafields.custom.shortdesc.value }}
+      </div>
+    </div>
+    <div class="product-info-bottom-{{ section.id }}">
+      <div class="product-price-{{ section.id }} tidbit">
+        {{ product.price | money }}
+      </div>
+
+      <div class="product-link-{{ section.id }} tidbit">
+        <strong
+          ><a href="{{ product.url }}" class="btn">{{ 'View details >>' }}</a></strong
+        >
+      </div>
+
+      <div class="product-buy-button-{{ section.id }} tidbit">{% render 'buy-buttons', product: product %}</div>
+    </div>
+  </div>
+</div>
+
+{% comment %} 8239789899927 book product id {% endcomment %}

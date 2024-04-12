@@ -1,0 +1,130 @@
+{% schema %}
+{
+  "name": "Shop Products",
+  "tag": "section",
+  "class": "shop-products",
+  "limit": 2,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme_2",
+      "label": "Color Scheme"
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Shop Products",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+  .section-{{ section.id }} {
+    margin-top: 50px;
+  }
+
+  .container-{{ section.id }} {
+    display: flex;
+  }
+
+  .sidebar-nav-menu-{{ section.id }} {
+    flex: initial;
+    width: 200px;
+    font-size: 0.9em;
+  }
+  @media screen and (min-width: 990px) {
+    .dropdown-nav-menu-{{ section.id }} {
+      display: none;
+    }
+  }
+  .product-grid-{{ section.id }} {
+    flex: 1 0 auto;
+    margin-left: 25px;
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(290px, 1fr)); /*1fr 1fr 1fr;*/
+    /* grid-auto-rows: minmax(150px, auto); */
+    gap: 2em;
+    padding-bottom: 1em;
+  }
+
+  .card-wrapper-{{ section.id }} {
+    container-type: inline-size;
+    display: flex;
+    align-items: stretch;
+  }
+
+  @media screen and (max-width: 990px) {
+    .section-{{ section.id }} {
+      margin-top: 10px;
+    }
+    .sidebar-nav-menu-{{ section.id }} {
+      display: none; /* Hide the sidebar navigation on small screens */
+    }
+    .product-grid-{{ section.id }} {
+      margin-left: 0px;
+      margin-top: 15px;
+    }
+    .container-{{ section.id }} {
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 990px) {
+    .sidebar-dropdown-summary {
+      padding: 10px;
+      /* background-color: #fff; */
+      border: none;
+      font-weight: bold;
+      text-align: left;
+      width: 15em;
+    }
+
+    .sidebar-dropdown-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: none; /* Start hidden, will show when details is open */
+      /* background-color: #f9f9f9; */
+    }
+
+    .sidebar-dropdown-link {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: rgb(var(--text-color));;
+    }
+
+    .sidebar-dropdown-link:hover {
+      /* background-color: #e9e9e9; */
+      color: rgb(var(--color-price));
+    }
+
+    .active-link {
+      font-weight: bold;
+    }
+
+    .sidebar-dropdown-navigation details[open] .sidebar-dropdown-list {
+      display: block; /* Show dropdown when details is open */
+    }
+  }
+{% endstyle %}
+
+<section class="section-{{ section.id }} color-{{ section.settings.color_scheme }} page-width">
+  <div class="container-{{ section.id }}">
+    <div class="sidebar-nav-menu-{{ section.id }}">
+      {% render 'sidebar-nav' %}
+    </div>
+    <div class="dropdown-nav-menu-{{ section.id }}">
+      {% render 'dropdown-nav', menus: collections %}
+    </div>
+    <div class="product-grid-{{ section.id }}">
+      {% for product in collection.products %}
+        <div class="card-wrapper-{{ section.id }}">
+          {% render 'test-card', product: product, product_card_margin: 0 %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+{% comment %}
+  Sidebar navigation list snippet
+{% endcomment %}
+
+{% assign current_path = request.path %}
+
+<nav class="sidebar-navigation">
+  <ul>
+    <li class="nav-title-{{ section.id }}"><strong>SHOP CATEGORIES</strong></li>
+    {% for collection in collections %}
+      {% if current_path contains collection.handle %}
+        <li>
+          <a href="{{ collection.url }}" class="active-link" aria-current="page">
+            {{ collection.title }}
+          </a>
+        </li>
+      {% else %}
+        <li>
+          <a href="{{ collection.url }}">
+            {{ collection.title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+    <li>
+      {{ 'Book' | link_to: all_products['mastering-your-health-from-the-inside-out'].url }}
+    </li>
+  </ul>
+</nav>
+
+{% style %}
+  .sidebar-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-title-{{ section.id }} {
+    display: block;
+    padding: 0.5em;
+    color: inherit; /* Fallback color */
+    color: rgb(var(--text-color));
+    text-decoration: none;
+  }
+
+  .sidebar-navigation li a {
+    display: block;
+    padding: 0.5em;
+    color: inherit; /* Fallback color */
+    color: rgb(var(--text-color));
+    text-decoration: none;
+  }
+
+  .sidebar-navigation li a:hover {
+    color: rgb(var(--color-price));
+  }
+
+  .sidebar-navigation li a.active-link {
+    text-decoration: underline;
+  }
+{% endstyle %}
