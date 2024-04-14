@@ -146,22 +146,45 @@
     margin-top: {{ section.settings.margin_top }}px;
   }
 
-  .header {
+  .header-{{ section.id }} {
     display: block;
     text-align: {{ section.settings.alignment }};
+    margin-bottom: 1em;
   }
 
-  .header * {
+  .header-{{ section.id }} * {
     margin: 0px;
   }
 
-  .product-grid-{{ section.id }} {
+  .grid-container-{{ section.id }} {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    max-width: {{ settings.page_width }}px;
-    margin: 0 auto;
+  }
+
+  .product-grid-{{ section.id }} {
+    flex: 1 0 auto;
+    display: grid;
+    grid-template-columns:  repeat(2, minmax(300px, 1fr)); /*1fr 1fr 1fr;*/
+    /* grid-auto-rows: minmax(150px, auto); */
+    gap: 2em;
+    padding-bottom: 1em;
+  }
+
+  .card-wrapper-{{ section.id }} {
+    container-type: inline-size;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .product-grid-{{ section.id }} {
+      grid-template-columns: repeat(1, minmax(300px, 1fr)); /*1fr 1fr 1fr;*/
+      max-width: 545px;
+    }
+    .card-wrapper-{{ section.id }} {
+      max-width: 545px;
+    }
   }
 
   .view-more {
@@ -180,18 +203,6 @@
     color: rgb(var(--color-price));
   }
 
-  .preorder-button {
-    background-color: #BD765A; /* Rectangle color */
-    color: white; /* Text color */
-    font-size: 0.7em; /* Font size */
-    padding: 5px 10px; /* Padding inside the button */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    align-self: flex-start;
-    transform: translate(3em, 5em);
-    {% comment %} transform: translateX(55px); {% endcomment %}
-  }
-
   .product-card-container {
     margin-top: -30px;
   }
@@ -199,8 +210,8 @@
 
 {% assign max_products = section.settings.max_rows | times: 2 %}
 
-<section class="color-{{ section.settings.color_scheme }} featured-products section-{{ section.id }}">
-  <div class="header">
+<section class="color-{{ section.settings.color_scheme }} featured-products section-{{ section.id }} page-width">
+  <div class="header-{{ section.id }}">
     {% if section.settings.title_size == 's' %}
       <h3>{{ section.settings.section_title }}</h3>
     {% elsif section.settings.title_size == 'm' %}
@@ -209,38 +220,14 @@
       <h1>{{ section.settings.section_title }}</h1>
     {% endif %}
   </div>
-
-  <div class="product-grid-{{ section.id }}">
-    {% for product in section.settings.collection.products limit: max_products %}
-      {% if product.tags contains 'preorder' %}
-        <div class="product-card-container">
-          <button class="preorder-button">Coming Soon!</button>
-          {% render 'new-product-card',
-            product: product,
-            product_image_size: section.settings.product_image_size,
-            product_title_bold: section.settings.product_title_bold,
-            product_card_margin: section.settings.product_card_margin,
-            product_card_h_padding: section.settings.product_card_h_padding,
-            product_card_t_padding: section.settings.product_card_t_padding,
-            product_card_b_padding: section.settings.product_card_b_padding,
-            product_card_gap: section.settings.product_card_gap,
-            color_scheme: section.settings.color_scheme
-          %}
+  <div class="grid-container-{{ section.id }}">
+    <div class="product-grid-{{ section.id }}">
+      {% for product in section.settings.collection.products limit: max_products %}
+        <div class="card-wrapper-{{ section.id }}">
+          {% render 'test-card', product: product %}
         </div>
-      {% else %}
-        {% render 'new-product-card',
-          product: product,
-          product_image_size: section.settings.product_image_size,
-          product_title_bold: section.settings.product_title_bold,
-          product_card_margin: section.settings.product_card_margin,
-          product_card_h_padding: section.settings.product_card_h_padding,
-          product_card_t_padding: section.settings.product_card_t_padding,
-          product_card_b_padding: section.settings.product_card_b_padding,
-          product_card_gap: section.settings.product_card_gap,
-          color_scheme: section.settings.color_scheme
-        %}
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 
   {% if section.settings.view_more %}

@@ -1,5 +1,41 @@
 {
   "sections": {
+    "product_info_ThG8Ve": {
+      "type": "product-info",
+      "settings": {
+        "background_color": "#f0edea",
+        "color_scheme": ""
+      }
+    },
+    "custom_liquid_Pg4wrE": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<h2 id=\"h1-{{section.id}}\">Money Back Guarantee<\/h2>\n\n<style>\n#h1-{{section.id}} {text-align: center;}\n<\/style>",
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 52
+      }
+    },
+    "featured_products_BEzqG4": {
+      "type": "featured-products",
+      "settings": {
+        "section_title": "You may also like",
+        "margin_top": 40,
+        "alignment": "left",
+        "title_size": "m",
+        "color_scheme": "",
+        "collection": "all-health-supplements",
+        "max_rows": 1,
+        "view_more": true,
+        "product_image_size": 250,
+        "product_card_h_padding": 50,
+        "product_card_t_padding": 50,
+        "product_card_b_padding": 30,
+        "product_card_gap": 40,
+        "product_title_bold": true,
+        "product_card_margin": 20
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -69,6 +105,7 @@
         "description",
         "share"
       ],
+      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "",
@@ -85,88 +122,9 @@
         "padding_bottom": 12
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "image-with-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
-      "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column-0": {
-          "type": "column",
-          "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column-0",
-        "column-1"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -185,9 +143,10 @@
     }
   },
   "order": [
+    "product_info_ThG8Ve",
+    "custom_liquid_Pg4wrE",
+    "featured_products_BEzqG4",
     "main",
-    "image-with-text",
-    "multicolumn",
     "related-products"
   ]
 }

@@ -1,9 +1,9 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/drdave-logo-final.png",
+    "logo": "shopify:\/\/shop_images\/drdave-logo-final-crop.png",
     "logo_width": 250,
     "favicon": "shopify:\/\/shop_images\/drdave-favicon.png",
-    "type_header_font": "libre_franklin_n4",
+    "type_header_font": "libre_franklin_n3",
     "heading_scale": 100,
     "type_body_font": "libre_franklin_n4",
     "body_scale": 100,
@@ -112,7 +112,7 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
-    "cart_type": "notification",
+    "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
@@ -431,7 +431,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "a#HeaderMenu-shop-all-health-supplements {text-align: left;}"
+      "a#HeaderMenu-shop-all-health-supplements {text-align: left;}",
+      ".header--middle-left {grid-template-columns: auto 1fr;}"
     ]
   }
 }

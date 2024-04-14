@@ -6,7 +6,9 @@
 
 <nav class="sidebar-navigation">
   <ul>
-    <li class="nav-title-{{ section.id }}"><strong>SHOP CATEGORIES</strong></li>
+    <li class="nav-title-{{ section.id }}">
+      <strong style="color: rgb(var(--color-foreground))">SHOP CATEGORIES</strong>
+    </li>
     {% for collection in collections %}
       {% if current_path contains collection.handle %}
         <li>
@@ -37,8 +39,6 @@
   .nav-title-{{ section.id }} {
     display: block;
     padding: 0.5em;
-    color: inherit; /* Fallback color */
-    color: rgb(var(--text-color));
     text-decoration: none;
   }
 
@@ -46,7 +46,7 @@
     display: block;
     padding: 0.5em;
     color: inherit; /* Fallback color */
-    color: rgb(var(--text-color));
+    color: rgb(var(--color-foreground));
     text-decoration: none;
   }
 
@@ -56,5 +56,6 @@
 
   .sidebar-navigation li a.active-link {
     text-decoration: underline;
+    color: rgb(var(--color-price));
   }
 {% endstyle %}

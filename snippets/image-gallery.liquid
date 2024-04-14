@@ -1,0 +1,83 @@
+{% comment %}
+  Product image gallery snippet.
+{% endcomment %}
+{% assign max_image_width = 800 %}
+
+<div class="image-gallery">
+  <div class="gallery-main-image-container color-{{ section.settings.color_scheme }}">
+    <div class="gallery-main-image">
+      <img
+        id="main-image"
+        src="{{ product_images | first | image_url: width: max_image_width }}"
+        alt="{{ product.title }}"
+      >
+    </div>
+  </div>
+
+  <div class="gallery-thumbnails">
+    {% for image in product_images %}
+      <div class="thumbnail color-{{ section.settings.color_scheme }}">
+        <img
+          src="{{ image | image_url: width: max_image_width }}"
+          alt="{{ product.title }}"
+          data-full-size-url="{{ image | image_url: width: max_image_width }}"
+          onclick="updateMainImage(this)"
+        >
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  function updateMainImage(thumbnail) {
+    const mainImage = document.getElementById('main-image');
+    mainImage.src = thumbnail.dataset.fullSizeUrl;
+  }
+</script>
+
+<style>
+  .image-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    {% comment %} grid-template-rows: 4fr 1fr; {% endcomment %}
+    gap: 20px;
+    width: 100%;
+    max-width: {{max_image_width}}px;
+  }
+  .gallery-main-image-container {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 4px #ABABAB;
+    aspect-ratio: 1;
+  }
+  .gallery-main-image {
+    padding: 5%; /* Adjust as needed */
+  }
+  .gallery-main-image img {
+    max-width: 100%;
+    max-height: 950px; /* Set max height of image */
+    height: 100%;
+    object-fit: contain;
+  }
+  .gallery-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    {% comment %} grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Thumbnails adjust to fill space, minimum 150px */ {% endcomment %}
+    gap: 2%;
+  }
+  .thumbnail {
+    display: flex;
+    align-items: center; /* Aligns flex children (the images) vertically */
+    justify-content: center;
+    cursor: pointer;
+    padding: 5%;
+    box-shadow: 0px 0px 4px #ABABAB;
+    aspect-ratio: 1;
+  }
+  .thumbnail img {
+    max-width: 100%; /* Ensures the image is fully contained within the thumbnail */
+    max-height: 120px; /* Adjust thumbnail height as needed */
+    height: 100%;
+    object-fit: contain; /* Ensures the full image is seen */
+  }
+</style>

@@ -6,10 +6,16 @@
   "limit": 2,
   "settings": [
     {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F0EDEA"
+    },
+    {
       "type": "color_scheme",
       "id": "color_scheme",
       "default": "scheme_2",
-      "label": "Color Scheme"
+      "label": "Product Color Scheme"
     }
   ],
   "presets": [
@@ -23,7 +29,7 @@
 
 {% style %}
   .section-{{ section.id }} {
-    margin-top: 50px;
+    padding-top: 50px;
   }
 
   .container-{{ section.id }} {
@@ -58,7 +64,7 @@
 
   @media screen and (max-width: 990px) {
     .section-{{ section.id }} {
-      margin-top: 10px;
+      padding-top: 10px;
     }
     .sidebar-nav-menu-{{ section.id }} {
       display: none; /* Hide the sidebar navigation on small screens */
@@ -93,7 +99,7 @@
       display: block;
       padding: 10px;
       text-decoration: none;
-      color: rgb(var(--text-color));;
+      color: rgb(var(--text-color));
     }
 
     .sidebar-dropdown-link:hover {
@@ -102,7 +108,8 @@
     }
 
     .active-link {
-      font-weight: bold;
+      text-decoration: underline;
+      color: rgb(var(--color-price));
     }
 
     .sidebar-dropdown-navigation details[open] .sidebar-dropdown-list {
@@ -111,20 +118,22 @@
   }
 {% endstyle %}
 
-<section class="section-{{ section.id }} color-{{ section.settings.color_scheme }} page-width">
-  <div class="container-{{ section.id }}">
-    <div class="sidebar-nav-menu-{{ section.id }}">
-      {% render 'sidebar-nav' %}
+<div style="background-color: {{ section.settings.background_color }}">
+  <section class="section-{{ section.id }} page-width">
+    <div class="container-{{ section.id }}">
+      <div class="sidebar-nav-menu-{{ section.id }}">
+        {% render 'sidebar-nav' %}
+      </div>
+      <div class="dropdown-nav-menu-{{ section.id }}">
+        {% render 'dropdown-nav', menus: collections %}
+      </div>
+      <div class="product-grid-{{ section.id }}">
+        {% for product in collection.products %}
+          <div class="card-wrapper-{{ section.id }} color-{{ section.settings.color_scheme }}">
+            {% render 'test-card', product: product, product_card_margin: 0 %}
+          </div>
+        {% endfor %}
+      </div>
     </div>
-    <div class="dropdown-nav-menu-{{ section.id }}">
-      {% render 'dropdown-nav', menus: collections %}
-    </div>
-    <div class="product-grid-{{ section.id }}">
-      {% for product in collection.products %}
-        <div class="card-wrapper-{{ section.id }}">
-          {% render 'test-card', product: product, product_card_margin: 0 %}
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+  </section>
+</div>
