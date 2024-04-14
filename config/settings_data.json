@@ -432,8 +432,7 @@
   "platform_customizations": {
     "custom_css": [
       "a#HeaderMenu-shop-all-health-supplements {text-align: left;}",
-      ".header--middle-left {grid-template-columns: auto 1fr;}",
-      "@media (min-width: 280px) and (max-width: 767px) {:root {overflow-x: hidden; }}"
+      ".header--middle-left {grid-template-columns: auto 1fr;}"
     ]
   }
 }
