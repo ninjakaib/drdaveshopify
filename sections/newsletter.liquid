@@ -29,8 +29,17 @@
               data-cascade
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
+            style="max-width: 900px;"
           >
-            {{ block.settings.heading }}
+            <style>
+              .highlighted {
+                font-family: 'Lora';
+                text-decoration: underline;
+                font-style: italic;
+                font-weight: 400;
+              }
+            </style>
+            {{ block.settings.custom_heading }}
           </h2>
         {%- when 'paragraph' -%}
           <div
@@ -120,9 +129,7 @@
   "tag": "section",
   "class": "section",
   "disabled_on": {
-    "groups": [
-      "header"
-    ]
+    "groups": ["header"]
   },
   "settings": [
     {
@@ -177,6 +184,12 @@
           "id": "heading",
           "default": "Subscribe to our emails",
           "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "html",
+          "label": "Custom Header (html)",
+          "id": "custom_heading",
+          "default": "Subscribe to our newsletter for <span class=\"highlighted\">actionable</span> <span class=\"highlighted\">health</span> <span class=\"highlighted\">content</span> you can use."
         },
         {
           "type": "select",
