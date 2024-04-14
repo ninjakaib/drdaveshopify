@@ -99,38 +99,48 @@
     text-align: center;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: no-wrap;
     overflow:hidden;
     overflow-y:hidden;
   }
 
   .product-details {
+    display: flex;
     width: auto;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    {% comment %} justify-content: center; {% endcomment %}
     padding-top: {{ section.settings.content_t_padding }}px;
     padding-bottom: {{ section.settings.content_b_padding }}px;
-    position: relative;
-    left: 5%;
+    transform: translateX(15%);
+    flex: 0 1 auto;
   }
 
-  .product-heading h1 {
+  .product-heading {
     margin-top: 0;
     margin-bottom: 30px;
-    overflow: visible;
+    min-width: 150%;
+    z-index: 1;
   }
 
   .product-cards {
     display: flex;
-    column-gap: {{ section.settings.product_gap }}px;
-    row-gap: {{ section.settings.product_gap | divided_by: 2 }}px;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex: 0 1 0;
+    {% comment %} column-gap: {{ section.settings.product_gap }}px; {% endcomment %}
+    {% comment %} gap: {{ section.settings.product_gap | divided_by: 2 }}px; {% endcomment %}
+    gap: 30%;
+    justify-content: space-evenly;
+    {% comment %} flex-wrap: wrap; {% endcomment %}
+  }
+
+  .product-image-{{ section.id }} {
+    flex: 0 1 0;
   }
 
   /* Additional styles for image hover effect */
   .product-image-{{ section.id }} img {
+    height: -webkit-fit-content;
+    object-fit: contain;
+    max-width: 100%;
     transition: transform 0.3s ease; /* Smooth transition for the transform effect */
   }
 
@@ -139,7 +149,7 @@
   }
 
   .product-item {
-    flex: 0 1 auto;
+    {% comment %} flex: 0 1 0; {% endcomment %}
     margin-top: 10px;
   }
 
@@ -149,11 +159,49 @@
 
   .hero-image {
     display: flex;
+    flex: 0 1 auto;
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
-    left: -5%;
+    {% comment %} left: -3%; {% endcomment %}
+    min-width: 300px;
   }
+  .hero-image img {
+    max-width: 100%;
+    height: -webkit-fit-content;
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .hero-image {
+      display: none;
+    }
+    .hero-image img {
+      width: 0px;
+    }
+    .product-details {
+      display: block;
+      padding-top: {{ section.settings.content_t_padding | times: 0.5}}px;
+      padding-bottom: {{ section.settings.content_b_padding | times: 0.5 }}px;
+      transform: translateX(0);
+      flex: 0 1 0;
+    }
+    .promotional-content {
+      display: block;
+    }
+    .product-heading {
+      width: 100%;
+      min-width: initial;
+      z-index: initial;
+    }
+    .product-cards {
+      justify-content: space-evenly;
+      gap: initial;
+    }
+    .product-item {
+      margin-left: 1em;
+      margin-right: 1em;
+    }
 </style>
 
 <div
@@ -161,12 +209,10 @@
   data-section-type="promotional-products"
   data-section-id="{{ section.id }}"
 >
-  <div class="promotional-content">
+  <div class="promotional-content page-width">
     <!-- Div1: Title and Products -->
     <div class="product-details">
-      <div class="product-heading">
-        <h1>{{ section.settings.title | newline_to_br }}</h1>
-      </div>
+      <h1 class="product-heading">{{ section.settings.title | newline_to_br }}</h1>
 
       <div class="product-cards">
         {% for product in section.settings.product_list %}
