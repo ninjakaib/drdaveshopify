@@ -161,8 +161,9 @@
       }
     }
 
-  .product-price-{{ section.id }} {
+  .product-price-{{ section.id }} * {
     color: rgb(var(--color-price));
+    font-size: 1.5rem;
     font-weight: 600;
   }
 
@@ -205,7 +206,8 @@
     </div>
     <div class="product-info-bottom-{{ section.id }}">
       <div class="product-price-{{ section.id }} tidbit">
-        {{ product.price | money }}
+        {% render 'price', product: product %}
+        {% comment %} {{ product.price | money }} {% endcomment %}
       </div>
 
       <div class="product-link-{{ section.id }} tidbit">
