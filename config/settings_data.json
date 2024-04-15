@@ -116,6 +116,9 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
+    "checkout_input_background_color_mode": "white",
+    "checkout_accent_color": "#1b99a1",
+    "checkout_button_color": "#0d575b",
     "body_letter_spacing": -0.4,
     "sections": {
       "main-password-header": {
