@@ -9,6 +9,7 @@
           "type": "heading",
           "settings": {
             "heading": "Subscribe to our newsletter for <span style=\"text-decoration:underline\"><em>actionable health content<\/em><\/span> you can use.",
+            "custom_heading": "Subscribe to our newsletter for <span class=\"highlighted\">actionable<\/span> <span class=\"highlighted\">health<\/span> <span class=\"highlighted\">content<\/span> you can use.",
             "heading_size": "h1"
           }
         },
@@ -32,11 +33,6 @@
         "padding_bottom": 52
       }
     },
-    "custom_footer_VVCQzL": {
-      "type": "custom-footer",
-      "settings": {
-      }
-    },
     "footer": {
       "type": "footer",
       "settings": {
@@ -49,7 +45,7 @@
         "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": true,
-        "margin_top": 0,
+        "margin_top": 20,
         "padding_top": 0,
         "padding_bottom": 40
       }
@@ -57,7 +53,6 @@
   },
   "order": [
     "newsletter_mHrrrK",
-    "custom_footer_VVCQzL",
     "footer"
   ]
 }
