@@ -7,15 +7,6 @@
         "color_scheme": ""
       }
     },
-    "custom_liquid_Pg4wrE": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<h2 id=\"h1-{{section.id}}\">Money Back Guarantee<\/h2>\n\n<style>\n#h1-{{section.id}} {text-align: center;}\n<\/style>",
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 52
-      }
-    },
     "featured_products_BEzqG4": {
       "type": "featured-products",
       "settings": {
@@ -43,7 +34,7 @@
           "type": "text",
           "settings": {
             "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
+            "text_style": "body"
           }
         },
         "title": {
@@ -55,7 +46,7 @@
           "type": "text",
           "settings": {
             "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
+            "text_style": "body"
           }
         },
         "price": {
@@ -144,7 +135,6 @@
   },
   "order": [
     "product_info_ThG8Ve",
-    "custom_liquid_Pg4wrE",
     "featured_products_BEzqG4",
     "main",
     "related-products"
