@@ -27,6 +27,46 @@
         "product_card_margin": 20
       }
     },
+    "rich_text_gUeJCK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Matbey": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Disclaimer<\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "caption_HWFjyt": {
+          "type": "caption",
+          "disabled": true,
+          "settings": {
+            "caption": "Disclaimer",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
+          }
+        },
+        "text_VLdGQc": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>THE DIETARY PRODUCTS MAY NOT HAVE UNDERGONE EVALUATION AND\/OR TESTING BY THE UNITED STATES FOOD AND DRUG ADMINISTRATION. THE RECOMMENDATIONS AND SUPPLEMENTS ARE NOT DESIGNED TO TREAT, PREVENT OR CURE MEDICAL DISEASES. BEFORE UNDERTAKING ANY RECOMMENDATIONS, SUPPLEMENTS OR CHANGES, CONSULT WITH YOUR PHYSICIAN.<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Matbey",
+        "caption_HWFjyt",
+        "text_VLdGQc"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -136,6 +176,7 @@
   "order": [
     "product_info_ThG8Ve",
     "featured_products_BEzqG4",
+    "rich_text_gUeJCK",
     "main",
     "related-products"
   ]
