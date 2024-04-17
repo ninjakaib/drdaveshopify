@@ -13,13 +13,13 @@
       {% if current_path contains collection.handle %}
         <li>
           <a href="{{ collection.url }}" class="active-link" aria-current="page">
-            {{ collection.title }}
+            {{ collection.description }}
           </a>
         </li>
       {% else %}
         <li>
           <a href="{{ collection.url }}">
-            {{ collection.title }}
+            {{ collection.description }}
           </a>
         </li>
       {% endif %}
