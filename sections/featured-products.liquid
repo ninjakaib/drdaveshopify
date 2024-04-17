@@ -209,15 +209,16 @@
 {% endstyle %}
 
 {% assign max_products = section.settings.max_rows | times: 2 %}
+{% assign title = section.settings.collection.description %}
 
 <section class="color-{{ section.settings.color_scheme }} featured-products section-{{ section.id }} page-width">
   <div class="header-{{ section.id }}">
     {% if section.settings.title_size == 's' %}
-      <h3>{{ section.settings.section_title }}</h3>
+      <h3>{{ title }}</h3>
     {% elsif section.settings.title_size == 'm' %}
-      <h2>{{ section.settings.section_title }}</h2>
+      <h2>{{ title }}</h2>
     {% elsif section.settings.title_size == 'l' %}
-      <h1>{{ section.settings.section_title }}</h1>
+      <h1>{{ title }}</h1>
     {% endif %}
   </div>
   <div class="grid-container-{{ section.id }}">

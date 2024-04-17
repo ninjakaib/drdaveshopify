@@ -124,11 +124,12 @@
 
   .product-cards {
     display: flex;
-    flex: 0 1 0;
+    {% comment %} flex: 0 1 0; {% endcomment %}
     {% comment %} column-gap: {{ section.settings.product_gap }}px; {% endcomment %}
     {% comment %} gap: {{ section.settings.product_gap | divided_by: 2 }}px; {% endcomment %}
-    gap: 30%;
+    {% comment %} gap: 10%; {% endcomment %}
     justify-content: space-evenly;
+    width: 100%;
     {% comment %} flex-wrap: wrap; {% endcomment %}
   }
 
@@ -195,8 +196,8 @@
       z-index: initial;
     }
     .product-cards {
-      justify-content: space-evenly;
-      gap: initial;
+      justify-content: center;
+      gap: 5%;
     }
     .product-item {
       margin-left: 1em;
