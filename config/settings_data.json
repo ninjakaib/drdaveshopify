@@ -237,8 +237,8 @@
           "text": "#062325",
           "button": "#0d575c",
           "button_label": "#fdfdfd",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#ffffff",
           "link": "#0d575b",
           "price": "#1b99a1",
           "secondary_text": "#000000"

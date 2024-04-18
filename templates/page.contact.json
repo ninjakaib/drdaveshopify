@@ -11,12 +11,12 @@
     "form": {
       "type": "contact-form",
       "custom_css": [
-        "div:has(.contact){background-color: #efedea;}"
+        "div:has(.contact) {background-color: #efedea;}"
       ],
       "settings": {
         "heading": "Contact Us",
         "heading_size": "h1",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-1af6f8d9-c796-47b9-81f5-5c212dc6d59e",
         "padding_top": 24,
         "padding_bottom": 72
       }
