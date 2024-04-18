@@ -524,7 +524,7 @@
         "purchase_options_agreement_label": "One or more items in your cart is a pre-order purchase. By continuing with your order, you agree to make a one-time payment immediately before the product is available for fulfillment. All cancellations are subject to the  {{ cancellation_policy_label }}."
       },
       "shop_policies": {
-        "purchase_options_policy": "Pre-order policy"
+        "subscription_policy": "Pre-order policy"
       }
     }
   }
