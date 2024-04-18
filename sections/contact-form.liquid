@@ -52,19 +52,58 @@
         </ul>
       {%- endif -%}
       <div class="contact__fields">
+        {% comment %}
+          <div class="field">
+            <input
+              class="field__input"
+              autocomplete="name"
+              type="text"
+              id="ContactForm-name"
+              name="contact[{{ 'templates.contact.form.name' | t }}]"
+              value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+              placeholder="{{ 'templates.contact.form.name' | t }}"
+            >
+            <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+          </div>
+          <div class="field">
+            <input
+              class="field__input"
+              autocomplete="name"
+              type="text"
+              id="ContactForm-name"
+              name="contact[{{ 'templates.contact.form.name' | t }}]"
+              value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+              placeholder="{{ 'templates.contact.form.name' | t }}"
+            >
+            <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+          </div>
+        {% endcomment %}
         <div class="field">
           <input
             class="field__input"
             autocomplete="name"
             type="text"
-            id="ContactForm-name"
-            name="contact[{{ 'templates.contact.form.name' | t }}]"
-            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-            placeholder="{{ 'templates.contact.form.name' | t }}"
+            id="ContactForm-first_name"
+            name="contact[{{ 'customer.register.first_name' | t }}]"
+            value="{% if form.first_name %}{{ form.first_name }}{% elsif customer %}{{ customer.first_name }}{% endif %}"
+            placeholder="{{ 'customer.register.first_name' | t }}"
           >
-          <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+          <label class="field__label" for="ContactForm-first_name">{{ 'customer.register.first_name' | t }}</label>
         </div>
-        <div class="field field--with-error">
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="name"
+            type="text"
+            id="ContactForm-last_name"
+            name="contact[{{ 'customer.register.last_name' | t }}]"
+            value="{% if form.first_name %}{{ form.last_name }}{% elsif customer %}{{ customer.last_name }}{% endif %}"
+            placeholder="{{ 'customer.register.last_name' | t }}"
+          >
+          <label class="field__label" for="ContactForm-last_name">{{ 'customer.register.last_name' | t }}</label>
+        </div>
+
+        <div class="field field--with-error" style="grid-column: span 2;">
           <input
             autocomplete="email"
             type="email"
@@ -139,10 +178,7 @@
   "tag": "section",
   "class": "section",
   "disabled_on": {
-    "groups": [
-      "header",
-      "footer"
-    ]
+    "groups": ["header", "footer"]
   },
   "settings": [
     {

@@ -252,12 +252,12 @@
           </localization-form>
         {%- endif -%}
 
-        
+      
       </div>
             <style>
-        :root {
+        {% comment %} :root {
             --inputs-radius: 10px !important;
-        }
+        } {% endcomment %}
 
         .mobile-search {
           display: none;
@@ -269,14 +269,14 @@
 
         @media only screen and (min-width: 769px) {
           predictive-search[open] .predictive-search {
-                position: absolute;
-                min-width: 768px;
-                left: -768px;
-                transform: translateX(50%);
+                {% comment %} position: absolute; {% endcomment %}
+                {% comment %} min-width: 768px; {% endcomment %}
+                {% comment %} left: -768px; {% endcomment %}
+                {% comment %} transform: translateX(50%); {% endcomment %}
           }          
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 750px) {
           .mobile-search {
             display: block;
           }
@@ -297,7 +297,7 @@
           <search-form class="search-modal__form">
         {%- endif -%}
         <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-          <div class="field">
+          <div class="search field">
             <input
               class="search__input field__input"
               id="{{ input_id }}"

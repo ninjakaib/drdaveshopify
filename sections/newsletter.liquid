@@ -23,15 +23,19 @@
           {% render block %}
         {%- when 'heading' -%}
           <h2
+            id="newsletter-heading"
             class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
-            style="max-width: 900px;"
           >
             <style>
+              #newsletter-heading {
+                margin: 0 auto;
+                max-width: 72rem;
+              }
               .highlighted {
                 font-family: 'Lora';
                 text-decoration: underline;
@@ -63,12 +67,45 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                <div class="field">
+                <style>
+                  {% comment %} #NewsletterForm--{{ section.id }} {
+                    background-color: white;
+                    color: rgba(6, 35, 37, 0.75);
+                  } {% endcomment %}
+                  .customnewsletter.field__input {
+                    background-color: white;
+                    color: rgba(6, 35, 37);
+                  }
+                  .customnewsletter.field__label {
+                    color: rgba(6, 35, 37, 0.75);
+                  }
+                  #NewsletterForm--{{ section.id }}::selection {
+                    background-color: rgba(6, 35, 37, 0.2);
+                  }
+                </style>
+                <div class="customnewsletter field">
+                  <input
+                    class="customnewsletter field__input"
+                    autocomplete="name"
+                    type="text"
+                    id="NewsletterForm--{{ section.id }}"
+                    name="contact[first_name]"
+                    value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                    placeholder="{{ 'templates.contact.form.name' | t }}"
+                  >
+                  <label class="customnewsletter field__label" for="ContactForm-name">
+                    {{- 'templates.contact.form.name' | t -}}
+                  </label>
+                </div>
+                <div class=" customnewsletter field">
+                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                    {{- 'templates.contact.form.name' | t -}}
+                  </label>
                   <input
                     id="NewsletterForm--{{ section.id }}"
                     type="email"
                     name="contact[email]"
-                    class="field__input"
+                    class="customnewsletter field__input"
                     value="{{ form.email }}"
                     aria-required="true"
                     autocorrect="off"
@@ -84,19 +121,22 @@
                     placeholder="{{ 'newsletter.label' | t }}"
                     required
                   >
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                  <label class="customnewsletter field__label" for="NewsletterForm--{{ section.id }}">
                     {{ 'newsletter.label' | t }}
                   </label>
-                  <button
-                    type="submit"
-                    class="newsletter-form__button field__button"
-                    name="commit"
-                    id="Subscribe"
-                    aria-label="{{ 'newsletter.button_label' | t }}"
-                  >
-                    {% render 'icon-arrow' %}
-                  </button>
+                  {% comment %}
+                    <button
+                      type="submit"
+                      class="newsletter-form__button field__button"
+                      name="commit"
+                      id="Subscribe"
+                      aria-label="{{ 'newsletter.button_label' | t }}"
+                    >
+                      {% render 'icon-arrow' %}
+                    </button>
+                  {% endcomment %}
                 </div>
+
                 {%- if form.errors -%}
                   <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
                     {%- render 'icon-error' -%}
@@ -104,7 +144,22 @@
                     {{ form.errors.messages.email -}}
                   </small>
                 {%- endif -%}
+
+                <div class="newsletter-button">
+                  <button
+                    type="submit"
+                    class="button"
+                    name="commit"
+                    id="Subscribe"
+                    {% comment %} aria-label="{{ 'newsletter.button_label' | t }}" {% endcomment %}
+                  >
+                    Sign Up
+                    {% comment %} {% render 'icon-arrow' %} {% endcomment %}
+                  </button>
+                  {% comment %} <button type="submit" class="button">Sign up</button> {% endcomment %}
+                </div>
               </div>
+
               {%- if form.posted_successfully? -%}
                 <h3
                   class="newsletter-form__message newsletter-form__message--success form__message"

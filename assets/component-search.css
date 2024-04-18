@@ -2,6 +2,10 @@
   padding-right: 9.8rem;
 }
 
+.search__input {
+  border-radius: 10px;
+}
+
 .search__button {
   right: var(--inputs-border-width);
   top: var(--inputs-border-width);
@@ -71,4 +75,33 @@ input::-webkit-search-decoration {
 
 .template-search__results {
   position: relative;
+}
+
+
+/* fixing search radius */
+
+
+/* component-form */
+.search__input.field__input {
+  border-radius: 10px;
+}
+
+.search.field:before{
+  border-radius: 10px;
+}
+
+.search.field:after {
+  border-radius: 10px;
+}
+
+.search.field:hover.field:after {
+  border-radius: 10px;
+}
+
+.search__input.field__input:focus-visible {
+  border-radius: 10px;
+}
+
+.search__input.field__input:focus {
+  border-radius: 10px;
 }
