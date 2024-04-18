@@ -24,12 +24,12 @@
         "email_form_BbExtw"
       ],
       "custom_css": [
-        ".newsletter {margin-top: 30px;}"
+
       ],
       "settings": {
         "color_scheme": "scheme-526fd71a-4c95-4b9d-807c-a3ce777b6689",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 36,
         "padding_bottom": 52
       }
     },
