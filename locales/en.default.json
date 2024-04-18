@@ -517,5 +517,12 @@
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Send on (optional)"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "payment": {
+        "purchase_options_agreement_label": "One or more items in your cart is a pre-order purchase. By continuing with your order, you agree to make a one-time payment immediately before the product is available for fulfillment. All cancellations are subject to the  {{ cancellation_policy_label }}."
+      }
+    }
   }
 }
