@@ -57,7 +57,9 @@
       ],
       "custom_css": [
         ".footer__content-top {padding-bottom: 1rem;}",
-        "p {font-size: 11px; margin: 0;}"
+        "p {font-size: 12px; margin: 0; text-align: center;}",
+        ".footer-block {width: 100%;}",
+        ".footer__blocks-wrapper {display: flex; align-content: center; flex-direction: column; justify-content: center; min-width: 100% !important;}"
       ],
       "settings": {
         "color_scheme": "scheme-5",
