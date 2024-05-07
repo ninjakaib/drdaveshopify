@@ -284,10 +284,24 @@
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
             <ul class="list list-payment" role="list">
+              <li class="list-payment__item">
+                {{ 'visa' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              </li>
+              <li class="list-payment__item">
+                {{ 'master' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              </li>
+              <li class="list-payment__item">
+                {{ 'american_express' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              </li>
+              <li class="list-payment__item">
+                {{ 'discover' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              </li>
               {%- for type in shop.enabled_payment_types -%}
-                <li class="list-payment__item">
-                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                </li>
+                {% comment %}
+                  <li class="list-payment__item">
+                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                  </li>
+                {% endcomment %}
               {%- endfor -%}
             </ul>
           </div>

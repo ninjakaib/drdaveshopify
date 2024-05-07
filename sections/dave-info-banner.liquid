@@ -105,7 +105,9 @@
       <div class="dave-text">
         <p>{{ section.settings.title }}</p>
       </div>
-      <div class="about-button-{{ section.id }}">{% render 'about-button', input_text: 'Learn More' %}</div>
+      <div class="about-button-{{ section.id }}">
+        <a href="{{ pages['about-us'].url }}">{% render 'about-button', input_text: 'Learn More' %}</a>
+      </div>
     </div>
   </div>
 </div>
