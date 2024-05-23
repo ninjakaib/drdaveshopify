@@ -100,34 +100,6 @@
             <p>{% render 'price', product: product %}</p>
           </div>
 
-          <!-- variant selector -->
-          {% if product.variants.size > 1 %}
-            <div class="product-variant-dropdown">
-              <form action="/cart/add" method="post">
-                <select name="id" class="product-variant-select">
-                  {% for variant in product.variants %}
-                    {% if variant.available %}
-                      <option value="{{ variant.id }}">{{ variant.title }}</option>
-
-                    {% else %}
-                      <option disabled="disabled">{{ variant.title }} – Sold Out</option>
-                    {% endif %}
-                  {% endfor %}
-                </select>
-
-                <input type="submit" value="Buy now" class="product-variant-submit-button">
-              </form>
-            </div>
-          {% endif %}
-
-          {% if product.has_only_default_variant %}
-            <form method="post" action="/cart/add">
-              <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-
-              <input type="submit" value="Buy now" class="product-variant-submit-button">
-            </form>
-          {% endif %}
-          <!-- end variant selector -->
           <div class="quantity-selector-{{ section.id }}">
             <div
               id="Quantity-Form-{{ section.id }}"
