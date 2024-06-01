@@ -149,6 +149,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "6992340522935486548": {
+        "type": "shopify:\/\/apps\/subscription-plus\/blocks\/app\/79c17119-154e-465c-8480-a7e0399512ff",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
