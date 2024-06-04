@@ -2,9 +2,112 @@
   "sections": {
     "product_info_ThG8Ve": {
       "type": "product-info",
+      "disabled": true,
       "settings": {
         "background_color": "#f0edea",
         "color_scheme": ""
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "custom_liquid_fFwd7k": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"price-{{ section.id }}\">\n            <p>{% render 'price', product: product %}<\/p>\n          <\/div>\n\n{% style %}\n  .price-{{ section.id }} * {\n    color: rgb(var(--color-price));\n    font-weight: 600;\n  }\n{% endstyle %}"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "subscription_plus_subscription_plus_mWEeHC": {
+          "type": "shopify:\/\/apps\/subscription-plus\/blocks\/subscription-plus\/79c17119-154e-465c-8480-a7e0399512ff",
+          "settings": {
+            "advance_widget": true,
+            "default_option": "onetime",
+            "template": "modern",
+            "text_color": "#062325",
+            "branding_color": "#f8f7f4",
+            "terms_page_link": "",
+            "one_time_translation": "One time purchase",
+            "widget_type": "widget_3",
+            "show_term_checkbox": false,
+            "subscription_policy_text": "You’re subscribing to receive this item multiple times, on a recurring basis (according to the frequency you select) with a discount on every recurring order. You may cancel or change your subscription at any time.",
+            "enable_benifits": true,
+            "tooltip_text": "You can edit, skip, cancel and reschedule the subscription at any time.",
+            "enable_shadow": false,
+            "delivery_text": "Select Delivery Frequency",
+            "selected_text_color": "#0d575c",
+            "hover_text_color": "#1b99a1",
+            "radio_color": "#0d575c",
+            "bg_color_selected": "rgba(0,0,0,0)",
+            "discount_bg": "",
+            "discount_text_color": "",
+            "border_color": "",
+            "default_font": true,
+            "fonts": "libre_franklin_n4",
+            "font_size_heading": 14,
+            "font_size_price": 14
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "custom_liquid_fFwd7k",
+        "variant_picker",
+        "subscription_plus_subscription_plus_mWEeHC",
+        "quantity_selector",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-3",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 44
       }
     },
     "featured_products_BEzqG4": {
@@ -67,92 +170,6 @@
         "padding_bottom": 52
       }
     },
-    "main": {
-      "type": "main-product",
-      "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "body"
-          }
-        },
-        "title": {
-          "type": "title",
-          "settings": {
-          }
-        },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "body"
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "vendor",
-        "title",
-        "caption",
-        "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
-        "description",
-        "share"
-      ],
-      "disabled": true,
-      "settings": {
-        "enable_sticky_info": true,
-        "color_scheme": "",
-        "media_size": "large",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "gallery_layout": "stacked",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "mobile_thumbnails": "hide",
-        "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
-      }
-    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -175,9 +192,9 @@
   },
   "order": [
     "product_info_ThG8Ve",
+    "main",
     "featured_products_BEzqG4",
     "rich_text_gUeJCK",
-    "main",
     "related-products"
   ]
 }

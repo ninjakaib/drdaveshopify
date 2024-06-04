@@ -1,10 +1,31 @@
 {
   "sections": {
+    "17175064494fb5b76d": {
+      "type": "apps",
+      "blocks": {
+        "subscription_plus_manage_subscription_button_kCyN9A": {
+          "type": "shopify:\/\/apps\/subscription-plus\/blocks\/manage-subscription-button\/79c17119-154e-465c-8480-a7e0399512ff",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "subscription_plus_manage_subscription_button_kCyN9A"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "main": {
-      "type": "main-account"
+      "type": "main-account",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
+    "17175064494fb5b76d",
     "main"
   ]
 }
