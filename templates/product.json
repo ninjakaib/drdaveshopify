@@ -2,6 +2,7 @@
   "sections": {
     "product_info_ThG8Ve": {
       "type": "product-info",
+      "disabled": true,
       "settings": {
         "background_color": "#f0edea",
         "color_scheme": ""
@@ -15,22 +16,16 @@
           "settings": {
           }
         },
-        "price": {
-          "type": "price",
-          "disabled": true,
-          "settings": {
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
           }
         },
-        "custom_liquid_fFwd7k": {
-          "type": "custom_liquid",
-          "disabled": true,
+        "price": {
+          "type": "price",
           "settings": {
-            "custom_liquid": "<div class=\"price-{{ section.id }}\">\n            <p>{% render 'price', product: product %}<\/p>\n          <\/div>\n\n{% style %}\n  .price-{{ section.id }} * {\n    color: rgb(var(--color-price));\n    font-weight: 600;\n  }\n{% endstyle %}"
+            "display_shipping_policy": false,
+            "display_payment_terms": false
           }
         },
         "variant_picker": {
@@ -85,15 +80,16 @@
       },
       "block_order": [
         "title",
-        "price",
         "description",
-        "custom_liquid_fFwd7k",
+        "price",
         "variant_picker",
         "subscription_plus_subscription_plus_mWEeHC",
         "quantity_selector",
         "buy_buttons"
       ],
-      "disabled": true,
+      "custom_css": [
+
+      ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-3",
