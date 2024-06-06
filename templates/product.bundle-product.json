@@ -29,7 +29,6 @@
         },
         "custom_liquid_fFwd7k": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"price-{{ section.id }}\">\n            <p>{% render 'price', product: product %}<\/p>\n          <\/div>\n\n{% style %}\n  .price-{{ section.id }} * {\n    color: rgb(var(--color-price));\n    font-weight: 600;\n  }\n{% endstyle %}"
           }
