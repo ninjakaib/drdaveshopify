@@ -76,6 +76,12 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
+        },
+        "mbc_bundles_volume_discount_mbc_bundles_shortcode_widget_for_product_page_G6CGYb": {
+          "type": "shopify:\/\/apps\/mbc-bundles-volume-discount\/blocks\/mbc-bundles-shortcode-widget-for-product-page\/57c94b78-e464-47f4-9403-7ffcfcddb33f",
+          "settings": {
+            "widget_type": "default"
+          }
         }
       },
       "block_order": [
@@ -85,7 +91,8 @@
         "variant_picker",
         "subscription_plus_subscription_plus_mWEeHC",
         "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "mbc_bundles_volume_discount_mbc_bundles_shortcode_widget_for_product_page_G6CGYb"
       ],
       "custom_css": [
 
