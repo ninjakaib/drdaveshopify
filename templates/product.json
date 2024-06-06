@@ -2,7 +2,6 @@
   "sections": {
     "product_info_ThG8Ve": {
       "type": "product-info",
-      "disabled": true,
       "settings": {
         "background_color": "#f0edea",
         "color_scheme": ""
@@ -94,6 +93,7 @@
         "quantity_selector",
         "buy_buttons"
       ],
+      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-3",
