@@ -29,14 +29,6 @@
         "enable_language_selector": false
       }
     },
-    "dave_info_banner_6VQAN4": {
-      "type": "dave-info-banner",
-      "settings": {
-        "color_scheme": "",
-        "title": "",
-        "hero_image_size": 260
-      }
-    },
     "header": {
       "type": "header",
       "blocks": {
@@ -68,7 +60,6 @@
   },
   "order": [
     "announcement-bar",
-    "dave_info_banner_6VQAN4",
     "header"
   ]
 }
