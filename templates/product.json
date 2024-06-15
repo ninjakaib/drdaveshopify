@@ -37,6 +37,7 @@
         },
         "subscription_plus_subscription_plus_mWEeHC": {
           "type": "shopify:\/\/apps\/subscription-plus\/blocks\/subscription-plus\/79c17119-154e-465c-8480-a7e0399512ff",
+          "disabled": true,
           "settings": {
             "advance_widget": true,
             "default_option": "onetime",
@@ -65,12 +66,6 @@
             "font_size_price": 14
           }
         },
-        "mbc_bundles_volume_discount_mbc_bundles_shortcode_widget_for_product_page_G6CGYb": {
-          "type": "shopify:\/\/apps\/mbc-bundles-volume-discount\/blocks\/mbc-bundles-shortcode-widget-for-product-page\/57c94b78-e464-47f4-9403-7ffcfcddb33f",
-          "settings": {
-            "widget_type": "volume_discount"
-          }
-        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -90,7 +85,6 @@
         "price",
         "variant_picker",
         "subscription_plus_subscription_plus_mWEeHC",
-        "mbc_bundles_volume_discount_mbc_bundles_shortcode_widget_for_product_page_G6CGYb",
         "quantity_selector",
         "buy_buttons"
       ],
