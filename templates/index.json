@@ -48,26 +48,6 @@
         "padding_bottom": 0
       }
     },
-    "featured_products_gdLAxM": {
-      "type": "featured-products",
-      "settings": {
-        "section_title": "{{ section.settings.collection.title }}",
-        "margin_top": 30,
-        "alignment": "center",
-        "title_size": "l",
-        "color_scheme": "",
-        "collection": "all-health-supplements",
-        "max_rows": 2,
-        "view_more": true,
-        "product_image_size": 250,
-        "product_card_h_padding": 50,
-        "product_card_t_padding": 50,
-        "product_card_b_padding": 30,
-        "product_card_gap": 40,
-        "product_title_bold": true,
-        "product_card_margin": 20
-      }
-    },
     "featured_products_4349mQ": {
       "type": "featured-products",
       "settings": {
@@ -79,6 +59,26 @@
         "collection": "rx5-clinical-strength-supplements",
         "max_rows": 2,
         "view_more": false,
+        "product_image_size": 250,
+        "product_card_h_padding": 50,
+        "product_card_t_padding": 50,
+        "product_card_b_padding": 30,
+        "product_card_gap": 40,
+        "product_title_bold": true,
+        "product_card_margin": 20
+      }
+    },
+    "featured_products_gdLAxM": {
+      "type": "featured-products",
+      "settings": {
+        "section_title": "{{ section.settings.collection.title }}",
+        "margin_top": 30,
+        "alignment": "center",
+        "title_size": "l",
+        "color_scheme": "",
+        "collection": "all-health-supplements",
+        "max_rows": 2,
+        "view_more": true,
         "product_image_size": 250,
         "product_card_h_padding": 50,
         "product_card_t_padding": 50,
@@ -170,8 +170,8 @@
   "order": [
     "promotional_banner_McBmWE",
     "rich_text",
-    "featured_products_gdLAxM",
     "featured_products_4349mQ",
+    "featured_products_gdLAxM",
     "custom_featured_product_3R4mCc",
     "dave_info_banner_QhFwFb",
     "multicolumn"
