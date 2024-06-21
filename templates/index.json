@@ -59,13 +59,13 @@
         "collection": "rx5-clinical-strength-supplements",
         "max_rows": 1,
         "view_more": false,
-        "product_image_size": 310,
-        "product_card_h_padding": 62,
-        "product_card_t_padding": 59,
-        "product_card_b_padding": 44,
+        "product_image_size": 250,
+        "product_card_h_padding": 50,
+        "product_card_t_padding": 50,
+        "product_card_b_padding": 30,
         "product_card_gap": 40,
         "product_title_bold": true,
-        "product_card_margin": 20
+        "product_card_margin": 34
       }
     },
     "featured_products_gdLAxM": {
