@@ -130,21 +130,11 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "<p><em>\"Saw your video on lycopene, and bought 90 tabs of 500mg...started to take it 2 times a day...after 3 weeks checked my psa again went from 10.7 to 5.7...\"<\/em><\/p><p><em>-Mr. Yamamoto<\/em><\/p>",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
         "column3",
-        "column2",
-        "column1"
+        "column2"
       ],
       "custom_css": [
         "h2 {margin: auto;}"
