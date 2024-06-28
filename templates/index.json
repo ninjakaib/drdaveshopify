@@ -130,11 +130,21 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_rnjAYL": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Lyco-Power is the only product that actually works for me. Thank you!<\/p><p>-Robert N.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column3",
-        "column2"
+        "column2",
+        "column_rnjAYL"
       ],
       "custom_css": [
         "h2 {margin: auto;}"
