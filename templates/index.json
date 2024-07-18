@@ -26,6 +26,23 @@
         "content_b_padding": 50
       }
     },
+    "1721273130d583e8a3": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_fBapiK": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_fBapiK"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -169,6 +186,7 @@
   },
   "order": [
     "promotional_banner_McBmWE",
+    "1721273130d583e8a3",
     "rich_text",
     "featured_products_4349mQ",
     "featured_products_gdLAxM",
