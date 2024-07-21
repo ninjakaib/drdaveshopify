@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "product_info_ThG8Ve": {
@@ -45,7 +54,7 @@
             "branding_color": "#f8f7f4",
             "terms_page_link": "",
             "one_time_translation": "One time purchase",
-            "widget_type": "widget_3",
+            "widget_type": "widget_2",
             "show_term_checkbox": false,
             "subscription_policy_text": "You’re subscribing to receive this item multiple times, on a recurring basis (according to the frequency you select) with a discount on every recurring order. You may cancel or change your subscription at any time.",
             "enable_benifits": true,
