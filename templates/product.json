@@ -59,7 +59,7 @@
         "subscription_plus_subscription_plus_mWEeHC": {
           "type": "shopify:\/\/apps\/subscription-plus\/blocks\/subscription-plus\/79c17119-154e-465c-8480-a7e0399512ff",
           "settings": {
-            "advance_widget": true,
+            "advance_widget": false,
             "default_option": "onetime",
             "template": "modern",
             "text_color": "#062325",
