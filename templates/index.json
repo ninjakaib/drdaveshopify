@@ -49,7 +49,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p><em><strong>\"Out of the thousands of different supplements to choose from, I've narrowed the field to the handful of supplements that truly make a difference to your health. This is what I trust for my health and for yours.\"<\/strong><\/em><strong> <br\/>- Dr. Dave<\/strong><\/p>"
+            "text": "<h3><em><strong>\"Out of the thousands of different supplements to choose from, I've narrowed the field to the handful of supplements that truly make a difference to your health. This is what I trust for my health and for yours.\"<\/strong><\/em><strong> <br\/>- Dr. Dave<\/strong><\/h3>"
           }
         }
       },
@@ -61,7 +61,7 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 28,
         "padding_bottom": 0
       }
     },
