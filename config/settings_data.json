@@ -202,6 +202,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "13372541880985386961": {
+        "type": "shopify:\/\/apps\/low-stock-counter\/blocks\/app-embed-block\/c0e4a7d7-acc3-497b-80aa-b72cf8156ac3",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
