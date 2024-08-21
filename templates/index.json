@@ -96,7 +96,7 @@
         "collection": "all-health-supplements",
         "max_rows": 2,
         "view_more": true,
-        "product_image_size": 300,
+        "product_image_size": 330,
         "product_card_h_padding": 50,
         "product_card_t_padding": 50,
         "product_card_b_padding": 30,
