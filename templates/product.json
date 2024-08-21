@@ -49,16 +49,8 @@
           "settings": {
           }
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
         "subscription_plus_subscription_plus_mWEeHC": {
           "type": "shopify:\/\/apps\/subscription-plus\/blocks\/subscription-plus\/79c17119-154e-465c-8480-a7e0399512ff",
-          "disabled": true,
           "settings": {
             "advance_widget": false,
             "default_option": "onetime",
@@ -86,6 +78,13 @@
             "font_size_heading": 14,
             "font_size_price": 14
           }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
         }
       },
       "block_order": [
@@ -94,8 +93,8 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
-        "subscription_plus_subscription_plus_mWEeHC"
+        "subscription_plus_subscription_plus_mWEeHC",
+        "buy_buttons"
       ],
       "custom_css": [
 
