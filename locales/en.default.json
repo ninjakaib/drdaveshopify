@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "general": {
     "password_page": {
@@ -520,9 +529,6 @@
   },
   "shopify": {
     "checkout": {
-      "payment": {
-        "purchase_options_agreement_label": "One or more items in your cart is a pre-order purchase. By continuing with your order, you agree to make a one-time payment immediately before the product is available for fulfillment. All cancellations are subject to the  {{ cancellation_policy_label }}."
-      },
       "shop_policies": {
         "subscription_policy": "Pre-order policy"
       }
