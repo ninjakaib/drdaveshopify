@@ -82,7 +82,7 @@
         "heading_REytwF": {
           "type": "heading",
           "settings": {
-            "heading": "Email us:",
+            "heading": "Connect with us:",
             "heading_size": "h2"
           }
         },
@@ -110,7 +110,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/coding-on-laptop.jpg",
-        "height": "adapt",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
