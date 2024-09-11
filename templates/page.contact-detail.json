@@ -22,7 +22,7 @@
         "text_Y6Jrjx": {
           "type": "text",
           "settings": {
-            "text": "<p>Do you have a question or simply want more information about our products? Please complete the form below and we will respond, typically within 24-48 hours. <\/p><p>Our standard business hours are Monday to Friday 9am-5pm PST.<\/p>"
+            "text": "<p>Do you have a question or simply want more information about our products? Please complete the form below and we will respond, typically within 24-48 hours. <\/p><p>Our standard business hours are Monday to Friday 9am-5pm EST.<\/p>"
           }
         },
         "button_Ywf7tW": {
@@ -71,7 +71,7 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-1af6f8d9-c796-47b9-81f5-5c212dc6d59e",
         "padding_top": 40,
         "padding_bottom": 72
       }
