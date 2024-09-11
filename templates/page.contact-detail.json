@@ -49,7 +49,7 @@
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
-        "color_scheme": "scheme-1af6f8d9-c796-47b9-81f5-5c212dc6d59e",
+        "color_scheme": "scheme-3",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 28
@@ -71,7 +71,7 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "color_scheme": "scheme-1af6f8d9-c796-47b9-81f5-5c212dc6d59e",
+        "color_scheme": "scheme-1",
         "padding_top": 40,
         "padding_bottom": 72
       }
