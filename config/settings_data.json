@@ -9,9 +9,9 @@
 */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/drdave-logo-final-crop.png",
+    "logo": "shopify://shop_images/drdave-logo-final-crop.png",
     "logo_width": 250,
-    "favicon": "shopify:\/\/shop_images\/drdave-favicon_7e655e32-70c2-4044-aa1e-6d6c9c2c8b8c.png",
+    "favicon": "shopify://shop_images/drdave-favicon_7e655e32-70c2-4044-aa1e-6d6c9c2c8b8c.png",
     "type_header_font": "libre_franklin_n3",
     "heading_scale": 100,
     "type_body_font": "libre_franklin_n4",
@@ -108,10 +108,10 @@
     "sale_badge_color_scheme": "scheme-5",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "Hello zWorld",
-    "brand_description": "<p><a href=\"\/pages\/about-us\" title=\"About us\">About Us<\/a><\/p>",
+    "brand_description": "<p><a href=\"/pages/about-us\" title=\"About us\">About Us</a></p>",
     "social_facebook_link": "",
     "social_instagram_link": "",
-    "social_youtube_link": "https:\/\/www.youtube.com\/@drdaveclayton",
+    "social_youtube_link": "https://www.youtube.com/@drdaveclayton",
     "social_tiktok_link": "",
     "social_twitter_link": "",
     "social_snapchat_link": "",
@@ -149,55 +149,49 @@
     ],
     "blocks": {
       "6986766168588894248": {
-        "type": "shopify:\/\/apps\/preorder-now-wolf\/blocks\/app-embed\/7ee1d740-e67b-4ea8-b0c9-1f62cb8777ec",
+        "type": "shopify://apps/preorder-now-wolf/blocks/app-embed/7ee1d740-e67b-4ea8-b0c9-1f62cb8777ec",
         "disabled": false,
         "settings": {
         }
       },
       "4015264832934714879": {
-        "type": "shopify:\/\/apps\/ecomsend-popups\/blocks\/app\/a5670cf8-5705-4b01-ad9e-447033feae26",
+        "type": "shopify://apps/ecomsend-popups/blocks/app/a5670cf8-5705-4b01-ad9e-447033feae26",
         "disabled": false,
         "settings": {
         }
       },
       "11724500921838622758": {
-        "type": "shopify:\/\/apps\/frequently-bought\/blocks\/app-embed-block\/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
+        "type": "shopify://apps/frequently-bought/blocks/app-embed-block/b1a8cbea-c844-4842-9529-7c62dbab1b1f",
         "disabled": false,
         "settings": {
         }
       },
       "1143683040400472741": {
-        "type": "shopify:\/\/apps\/trustoo-io-reviews\/blocks\/trustoo-review-switch\/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+        "type": "shopify://apps/trustoo-io-reviews/blocks/trustoo-review-switch/c8f15077-6475-4e86-ad06-b66038d5ba2c",
         "disabled": true,
         "settings": {
         }
       },
       "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "6992340522935486548": {
-        "type": "shopify:\/\/apps\/subscription-plus\/blocks\/app\/79c17119-154e-465c-8480-a7e0399512ff",
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {
         }
       },
       "13375938897875554821": {
-        "type": "shopify:\/\/apps\/qikify-sales-pop-up\/blocks\/app-embed\/688dd516-1cdc-4008-8329-23089a1c4e24",
+        "type": "shopify://apps/qikify-sales-pop-up/blocks/app-embed/688dd516-1cdc-4008-8329-23089a1c4e24",
         "disabled": false,
         "settings": {
         }
       },
       "13372541880985386961": {
-        "type": "shopify:\/\/apps\/low-stock-counter\/blocks\/app-embed-block\/c0e4a7d7-acc3-497b-80aa-b72cf8156ac3",
+        "type": "shopify://apps/low-stock-counter/blocks/app-embed-block/c0e4a7d7-acc3-497b-80aa-b72cf8156ac3",
         "disabled": false,
         "settings": {
         }
       },
       "15683396631634586217": {
-        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": false,
         "settings": {
           "button_color": "#000000",
@@ -208,6 +202,31 @@
           "button_horizontal_position": "bottom_right",
           "button_vertical_position": "lowest",
           "greeting_message": "Thanks for your question. We usually respond within 24 hours."
+        }
+      },
+      "6992340522935486548": {
+        "type": "shopify://apps/subscription-plus/blocks/app/79c17119-154e-465c-8480-a7e0399512ff",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "3735154525232246443": {
+        "type": "shopify://apps/sendvio-email-sms/blocks/app_block/6fb7816d-63ad-49f9-ae13-e7c831b17dc6",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "15181020662106344915": {
+        "type": "shopify://apps/judge-me-reviews/blocks/popup_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "12120936241911852800": {
+        "type": "shopify://apps/judge-me-reviews/blocks/reviews_tab/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": true,
+        "settings": {
+          "position": "right"
         }
       }
     },
