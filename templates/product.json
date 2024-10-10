@@ -50,17 +50,17 @@
           }
         },
         "subscription_plus_subscription_plus_mWEeHC": {
-          "type": "shopify:\/\/apps\/subscription-plus\/blocks\/subscription-plus\/79c17119-154e-465c-8480-a7e0399512ff",
+          "type": "shopify://apps/subscription-plus/blocks/subscription-plus/79c17119-154e-465c-8480-a7e0399512ff",
           "settings": {
             "advance_widget": false,
-            "default_option": "onetime",
+            "default_option": "subscription",
             "template": "modern",
             "text_color": "#062325",
             "branding_color": "#000000",
             "terms_page_link": "",
             "one_time_translation": "One time purchase",
-            "widget_type": "widget_7",
-            "show_term_checkbox": false,
+            "widget_type": "widget_6",
+            "show_term_checkbox": true,
             "subscription_policy_text": "You’re subscribing to receive this item multiple times, on a recurring basis (according to the frequency you select) with a discount on every recurring order. You may cancel or change your subscription at any time.",
             "enable_benifits": true,
             "tooltip_text": "You can edit, skip, cancel and reschedule the subscription at any time.",
@@ -141,7 +141,7 @@
         "heading_Matbey": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Disclaimer<\/strong>",
+            "heading": "<strong>Disclaimer</strong>",
             "heading_size": "h2"
           }
         },
@@ -157,7 +157,7 @@
         "text_VLdGQc": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>THE DIETARY PRODUCTS MAY NOT HAVE UNDERGONE EVALUATION AND\/OR TESTING BY THE UNITED STATES FOOD AND DRUG ADMINISTRATION. THE RECOMMENDATIONS AND SUPPLEMENTS ARE NOT DESIGNED TO TREAT, PREVENT OR CURE MEDICAL DISEASES. BEFORE UNDERTAKING ANY RECOMMENDATIONS, SUPPLEMENTS OR CHANGES, CONSULT WITH YOUR PHYSICIAN.<\/strong><\/p>"
+            "text": "<p><strong>THE DIETARY PRODUCTS MAY NOT HAVE UNDERGONE EVALUATION AND/OR TESTING BY THE UNITED STATES FOOD AND DRUG ADMINISTRATION. THE RECOMMENDATIONS AND SUPPLEMENTS ARE NOT DESIGNED TO TREAT, PREVENT OR CURE MEDICAL DISEASES. BEFORE UNDERTAKING ANY RECOMMENDATIONS, SUPPLEMENTS OR CHANGES, CONSULT WITH YOUR PHYSICIAN.</strong></p>"
           }
         }
       },
