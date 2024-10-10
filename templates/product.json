@@ -85,6 +85,11 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
+        },
+        "judge_me_reviews_preview_badge_YbkDyP": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -94,7 +99,8 @@
         "variant_picker",
         "quantity_selector",
         "subscription_plus_subscription_plus_mWEeHC",
-        "buy_buttons"
+        "buy_buttons",
+        "judge_me_reviews_preview_badge_YbkDyP"
       ],
       "custom_css": [
 
@@ -117,6 +123,7 @@
     },
     "featured_products_BEzqG4": {
       "type": "featured-products",
+      "disabled": true,
       "settings": {
         "section_title": "You may also like",
         "margin_top": 40,
