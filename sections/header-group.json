@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -17,8 +17,8 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Potassimax, Lyco-Power and Prostate Support  on sale. Free Shipping over $99.",
-            "link": "shopify:\/\/collections\/rx5-clinical-strength-supplements"
+            "text": "This weekend $10 discount with Code HEALTHY.  Free Shipping over $99.",
+            "link": "shopify://collections/rx5-clinical-strength-supplements"
           }
         }
       },
@@ -42,7 +42,7 @@
       "type": "header",
       "blocks": {
         "subscription_plus_subscription_resource_eRm6rF": {
-          "type": "shopify:\/\/apps\/subscription-plus\/blocks\/subscription-resource\/79c17119-154e-465c-8480-a7e0399512ff",
+          "type": "shopify://apps/subscription-plus/blocks/subscription-resource/79c17119-154e-465c-8480-a7e0399512ff",
           "settings": {
           }
         }
