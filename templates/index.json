@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "promotional_banner_McBmWE": {
@@ -14,7 +14,7 @@
       "settings": {
         "color_scheme": "scheme-4",
         "title": "RX5 Maximum Strength Supplements.",
-        "hero_image": "shopify:\/\/shop_images\/dave-hero-image.png",
+        "hero_image": "shopify://shop_images/dave-hero-image.png",
         "hero_image_size": 520,
         "product_list": [
           "potassimax-multipack",
@@ -26,30 +26,13 @@
         "content_b_padding": 50
       }
     },
-    "1721273130d583e8a3": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_featured_carousel_fBapiK": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_featured_carousel_fBapiK"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
         "text": {
           "type": "text",
           "settings": {
-            "text": "<h3><em><strong>\"Out of the thousands of different supplements to choose from, I've narrowed the field to the handful of supplements that truly make a difference to your health. This is what I trust for my health and for yours.\"<\/strong><\/em><strong> <br\/>- Dr. Dave<\/strong><\/h3>"
+            "text": "<h3><em><strong>\"Out of the thousands of different supplements to choose from, I've narrowed the field to the handful of supplements that truly make a difference to your health. This is what I trust for my health and for yours.\"</strong></em><strong> <br/>- Dr. Dave</strong></h3>"
           }
         }
       },
@@ -105,12 +88,29 @@
         "product_card_margin": 20
       }
     },
+    "1721273130d583e8a3": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_fBapiK": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_fBapiK"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "custom_featured_product_3R4mCc": {
       "type": "custom-featured-product",
       "settings": {
         "color_scheme": "",
         "product": "mastering-your-health-from-the-inside-out",
-        "title": "<h1><em>Mastering Health<br\/><\/em>from the Inside Out<\/h1>",
+        "title": "<h1><em>Mastering Health<br/></em>from the Inside Out</h1>",
         "title_font_size": 36,
         "product_image_size": 400,
         "product_card_gap": 40,
@@ -123,7 +123,7 @@
       "settings": {
         "color_scheme": "scheme-3",
         "title": "After 20 years practicing medicine the old-fashioned way, I embarked on a journey to find the foods and supplements that were as powerful as medications for reversing disease. I used this knowledge to throw away my own medications, and I hope that you are able to do the same.",
-        "hero_image": "shopify:\/\/shop_images\/Dave-blue-shirt_1.png",
+        "hero_image": "shopify://shop_images/Dave-blue-shirt_1.png",
         "hero_image_size": 350
       }
     },
@@ -134,7 +134,7 @@
           "type": "column",
           "settings": {
             "title": "",
-            "text": "<p><em>\"Thank you again, after 2 weeks of following your recommendation my BP is down from 180\/90 to 120\/70. I am off medication and will continue to check it regularly. I will make your recommendations a part of my lifestyle from now on.\"<\/em><\/p><p><em>-Lynda P. <\/em><\/p>",
+            "text": "<p><em>\"Thank you again, after 2 weeks of following your recommendation my BP is down from 180/90 to 120/70. I am off medication and will continue to check it regularly. I will make your recommendations a part of my lifestyle from now on.\"</em></p><p><em>-Lynda P. </em></p>",
             "link_label": "",
             "link": ""
           }
@@ -143,7 +143,7 @@
           "type": "column",
           "settings": {
             "title": "",
-            "text": "<p><em>\"I went from a PSA of 5.3 to a 4.1 in about 3 months. Thank you doctor!\"<\/em><\/p><p><em>-Michael B.<\/em><\/p>",
+            "text": "<p><em>\"I went from a PSA of 5.3 to a 4.1 in about 3 months. Thank you doctor!\"</em></p><p><em>-Michael B.</em></p>",
             "link_label": "",
             "link": ""
           }
@@ -152,7 +152,7 @@
           "type": "column",
           "settings": {
             "title": "Lyco-Power",
-            "text": "<p>\"It is the only product that actually works for me. Thank you\"<\/p><p>-Robert N.<\/p>",
+            "text": "<p>\"It is the only product that actually works for me. Thank you\"</p><p>-Robert N.</p>",
             "link_label": "",
             "link": ""
           }
@@ -167,7 +167,7 @@
         "h2 {margin: auto;}"
       ],
       "settings": {
-        "title": "<em>Hear real stories sent to Dr. Dave...<\/em>",
+        "title": "<em>Hear real stories sent to Dr. Dave...</em>",
         "heading_size": "h2",
         "image_width": "third",
         "image_ratio": "adapt",
@@ -175,7 +175,7 @@
         "column_alignment": "left",
         "background_style": "primary",
         "button_label": "",
-        "button_link": "shopify:\/\/products\/potassimax",
+        "button_link": "shopify://products/potassimax",
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
@@ -187,7 +187,7 @@
       "type": "apps",
       "blocks": {
         "judge_me_reviews_medals_AwAM3m": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/medals\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/medals/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         }
@@ -202,10 +202,10 @@
   },
   "order": [
     "promotional_banner_McBmWE",
-    "1721273130d583e8a3",
     "rich_text",
     "featured_products_4349mQ",
     "featured_products_gdLAxM",
+    "1721273130d583e8a3",
     "custom_featured_product_3R4mCc",
     "dave_info_banner_QhFwFb",
     "multicolumn",
