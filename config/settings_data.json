@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo": "shopify://shop_images/drdave-logo-final-crop.png",
@@ -227,6 +227,22 @@
         "disabled": true,
         "settings": {
           "position": "right"
+        }
+      },
+      "341186785192672687": {
+        "type": "shopify://apps/seal-subscriptions/blocks/subscription-script-append/13b25004-a140-4ab7-b5fe-29918f759699",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "124348908681409149": {
+        "type": "shopify://apps/simple-bundles-kits/blocks/simple-bundles-v2/e553276b-36b2-446d-b80a-aa47fe5f96ac",
+        "disabled": false,
+        "settings": {
+          "select_placeholder": "Please select an option",
+          "disable_oos_options": true,
+          "custom_css": "",
+          "custom_js": ""
         }
       }
     },
