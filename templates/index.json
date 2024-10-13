@@ -195,6 +195,7 @@
       "block_order": [
         "judge_me_reviews_medals_AwAM3m"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
