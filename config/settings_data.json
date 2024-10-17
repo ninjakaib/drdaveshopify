@@ -148,12 +148,6 @@
 
     ],
     "blocks": {
-      "6986766168588894248": {
-        "type": "shopify://apps/preorder-now-wolf/blocks/app-embed/7ee1d740-e67b-4ea8-b0c9-1f62cb8777ec",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "4015264832934714879": {
         "type": "shopify://apps/ecomsend-popups/blocks/app/a5670cf8-5705-4b01-ad9e-447033feae26",
         "disabled": false,
@@ -180,12 +174,6 @@
       },
       "13375938897875554821": {
         "type": "shopify://apps/qikify-sales-pop-up/blocks/app-embed/688dd516-1cdc-4008-8329-23089a1c4e24",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "13372541880985386961": {
-        "type": "shopify://apps/low-stock-counter/blocks/app-embed-block/c0e4a7d7-acc3-497b-80aa-b72cf8156ac3",
         "disabled": false,
         "settings": {
         }
