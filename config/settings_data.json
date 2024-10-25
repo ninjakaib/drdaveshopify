@@ -238,26 +238,6 @@
           "button_vertical_position": "lowest",
           "greeting_message": "Thank you for contacting us! If you don't receive a reply soon, rest assured that we will email you.  Your chat has been tagged as high priority, and we will respond to your inquiry as soon as possible. We appreciate your patience!"
         }
-      },
-      "2538754702463810051": {
-        "type": "shopify://apps/sale-by-wizz/blocks/wizz_sale/cb67c40d-1985-4671-a8ba-9fcd0d4ad990",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "5254528770348971878": {
-        "type": "shopify://apps/discount-mixer/blocks/app-embed/791c666a-e939-4fd3-bdd3-b122066bb588",
-        "disabled": false,
-        "settings": {
-          "general_banner": false,
-          "sticky_banner": false,
-          "title": "All products have a discount!",
-          "background-color": "#000000",
-          "text-color": "#ffffff",
-          "url": "",
-          "font-size": 16,
-          "text-align": "center"
-        }
       }
     },
     "color_schemes": {
