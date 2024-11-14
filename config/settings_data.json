@@ -144,45 +144,32 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "4015264832934714879": {
         "type": "shopify://apps/ecomsend-popups/blocks/app/a5670cf8-5705-4b01-ad9e-447033feae26",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "1143683040400472741": {
         "type": "shopify://apps/trustoo-io-reviews/blocks/trustoo-review-switch/c8f15077-6475-4e86-ad06-b66038d5ba2c",
         "disabled": true,
-        "settings": {
-        }
+        "settings": {}
       },
       "14060646107696862457": {
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
-        "settings": {
-        }
-      },
-      "13375938897875554821": {
-        "type": "shopify://apps/qikify-sales-pop-up/blocks/app-embed/688dd516-1cdc-4008-8329-23089a1c4e24",
-        "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "6992340522935486548": {
         "type": "shopify://apps/subscription-plus/blocks/app/79c17119-154e-465c-8480-a7e0399512ff",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "3735154525232246443": {
         "type": "shopify://apps/sendvio-email-sms/blocks/app_block/6fb7816d-63ad-49f9-ae13-e7c831b17dc6",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "12120936241911852800": {
         "type": "shopify://apps/judge-me-reviews/blocks/reviews_tab/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
@@ -194,8 +181,7 @@
       "341186785192672687": {
         "type": "shopify://apps/seal-subscriptions/blocks/subscription-script-append/13b25004-a140-4ab7-b5fe-29918f759699",
         "disabled": true,
-        "settings": {
-        }
+        "settings": {}
       },
       "124348908681409149": {
         "type": "shopify://apps/simple-bundles-kits/blocks/simple-bundles-v2/e553276b-36b2-446d-b80a-aa47fe5f96ac",
@@ -210,14 +196,12 @@
       "1656560654682496077": {
         "type": "shopify://apps/instant/blocks/instant_core/927e19d9-4e68-41db-99c7-d8debdc1f80d",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "15181020662106344915": {
         "type": "shopify://apps/judge-me-reviews/blocks/popup_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": true,
-        "settings": {
-        }
+        "settings": {}
       },
       "15683396631634586217": {
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
@@ -232,6 +216,11 @@
           "button_vertical_position": "lowest",
           "greeting_message": "Thank you for contacting us! If you don't receive a reply soon, rest assured that we will email you.  Your chat has been tagged as high priority, and we will respond to your inquiry as soon as possible. We appreciate your patience!"
         }
+      },
+      "back-in-stock-restock-alerts-4bb73be2-b7c2-4870-949f-c528145452a3": {
+        "type": "shopify://apps/back-in-stock-restock-alerts/blocks/main/4bb73be2-b7c2-4870-949f-c528145452a3",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
