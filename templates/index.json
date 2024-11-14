@@ -17,8 +17,8 @@
         "hero_image": "shopify://shop_images/dave-hero-image.png",
         "hero_image_size": 520,
         "product_list": [
-          "potassimax-multipack",
-          "lyco-power"
+          "lyco-power",
+          "potassimax"
         ],
         "product_image_size": 250,
         "product_gap": 80,
@@ -188,8 +188,7 @@
       "blocks": {
         "judge_me_reviews_medals_AwAM3m": {
           "type": "shopify://apps/judge-me-reviews/blocks/medals/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
