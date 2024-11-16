@@ -161,11 +161,6 @@
         "disabled": false,
         "settings": {}
       },
-      "6992340522935486548": {
-        "type": "shopify://apps/subscription-plus/blocks/app/79c17119-154e-465c-8480-a7e0399512ff",
-        "disabled": false,
-        "settings": {}
-      },
       "3735154525232246443": {
         "type": "shopify://apps/sendvio-email-sms/blocks/app_block/6fb7816d-63ad-49f9-ae13-e7c831b17dc6",
         "disabled": false,
@@ -220,6 +215,11 @@
       "back-in-stock-restock-alerts-4bb73be2-b7c2-4870-949f-c528145452a3": {
         "type": "shopify://apps/back-in-stock-restock-alerts/blocks/main/4bb73be2-b7c2-4870-949f-c528145452a3",
         "disabled": false,
+        "settings": {}
+      },
+      "6992340522935486548": {
+        "type": "shopify://apps/subscription-plus/blocks/app/79c17119-154e-465c-8480-a7e0399512ff",
+        "disabled": true,
         "settings": {}
       }
     },
