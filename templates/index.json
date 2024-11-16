@@ -13,7 +13,7 @@
       "type": "promotional-banner",
       "settings": {
         "color_scheme": "scheme-4",
-        "title": "RX5 Maximum Strength Supplements.",
+        "title": "Maximum Strength Supplements.",
         "hero_image": "shopify://shop_images/dave-hero-image.png",
         "hero_image_size": 520,
         "product_list": [
@@ -71,7 +71,7 @@
     "featured_products_gdLAxM": {
       "type": "featured-products",
       "settings": {
-        "section_title": "{{ section.settings.collection.title }}",
+        "section_title": "HEALTH SUPPLEMENTS",
         "margin_top": 30,
         "alignment": "center",
         "title_size": "l",
