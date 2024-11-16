@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Sale on Lyco-Power, Prostate Support, and Potassimax! Free Shipping over $99.",
+            "text": "Sale on Lyco-Power, Prostate Support, and PMAX300! Free Shipping over $99.",
             "link": "shopify://collections/rx5-clinical-strength-supplements"
           }
         }
@@ -25,9 +25,7 @@
       "block_order": [
         "announcement-bar-0"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "",
         "show_line_separator": false,
@@ -43,8 +41,7 @@
       "blocks": {
         "subscription_plus_subscription_resource_eRm6rF": {
           "type": "shopify://apps/subscription-plus/blocks/subscription-resource/79c17119-154e-465c-8480-a7e0399512ff",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
