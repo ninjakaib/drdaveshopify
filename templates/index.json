@@ -71,7 +71,7 @@
     "featured_products_gdLAxM": {
       "type": "featured-products",
       "settings": {
-        "section_title": "HEALTH SUPPLEMENTS",
+        "section_title": "{{ section.settings.collection.title }}",
         "margin_top": 30,
         "alignment": "center",
         "title_size": "l",
