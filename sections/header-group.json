@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "PMAX1000, PMAX600, & Prostate Support on SALE. Free Shipping over $99.",
+            "text": "NOVEMEBER IS THE LAST MONTH OF PROSTATE SUPPORT & DR.DAVE SUPPLEMENTS. PMAX ON SUPER SALE. Free Shipping over $99.",
             "link": "shopify://collections/rx5-clinical-strength-supplements"
           }
         }
@@ -38,15 +38,6 @@
     },
     "header": {
       "type": "header",
-      "blocks": {
-        "subscription_plus_subscription_resource_eRm6rF": {
-          "type": "shopify://apps/subscription-plus/blocks/subscription-resource/79c17119-154e-465c-8480-a7e0399512ff",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "subscription_plus_subscription_resource_eRm6rF"
-      ],
       "settings": {
         "logo_position": "middle-left",
         "menu": "header-menu",
